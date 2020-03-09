@@ -63,6 +63,11 @@ public class DialogSubframe extends javax.swing.JFrame {
         });
 
         jButton1.setText("Check");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Age");
 
@@ -125,32 +130,39 @@ public class DialogSubframe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        try {
-            // TODO add your handling code here:
-            
-            // Aqui pongo todas las variabels
-            Environment clips = new Environment ();
-            clips.load("PATH_FILE_java.clp"); //este omandp va a coger todas las reglas que tenemmos
-            clips.reset();
-            String bulky = (String) jComboBox1.getSelectedItem();
-            String assertion = "(assert (Patient ( bulky "+bulky+") (age "+age+") )";
-            System.out.println("Assertinr:"+assertion);
-            clips.eval(assertion);
-            clips.run();
-            FactAddressValue patient = clips.findFact("Patient");
-            PrimitiveValue diagnosis = patient.getSlotValue("diagnosis");
-            System.out.print("Diagnosis:"+diagnosis);
-            jLabelResult.setText (diagnosis.toString);
-            PrimitiveValue message = patient.getSlotValue("message");
-        } catch (CLIPSException ex) {
-            Logger.getLogger(DialogSubframe.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
         
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+         try {
+            // TODO add your handling code here:
+            
+            // Aqui pongo todas las variabels
+            Environment clips = new Environment ();
+            clips.load("PATH_FILE_JAVAA.clp"); //este omandp va a coger todas las reglas que tenemmos
+            clips.reset();
+//            String bulky = (String) jComboBox1.getSelectedItem();
+//            Integer age =  jTextField2.getSelectedItem();
+//            String assertion = "(assert (Patient ( bulky "+bulky+") (age "+age+") )";
+//            System.out.println("Assertinr:"+assertion);
+//            clips.eval(assertion);
+//            clips.run();
+//            FactAddressValue patient = clips.findFact("Patient");
+//            PrimitiveValue diagnosis = patient.getSlotValue("diagnosis");
+//            System.out.print("Diagnosis:"+diagnosis);
+//            jLabelResult.setText (diagnosis.toString);
+//            PrimitiveValue message = patient.getSlotValue("message");
+        } catch (CLIPSException ex) {
+            Logger.getLogger(DialogSubframe.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
