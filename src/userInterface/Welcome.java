@@ -135,6 +135,9 @@ public class Welcome extends javax.swing.JFrame {
         p.setName(Name.getText());
         p.setAge(Integer.parseInt(Age.getText()));
         System.out.println(p.getName() + p.getAge() + p.getGender());
+        this.setVisible(false);
+        Feelings feelingsFr = new Feelings();
+        feelingsFr.setVisible(true);
     }//GEN-LAST:event_Next1ActionPerformed
 
     private void NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameActionPerformed

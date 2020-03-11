@@ -228,7 +228,10 @@ public class Feelings extends javax.swing.JFrame {
     }//GEN-LAST:event_No_BulkyActionPerformed
 
     private void Next3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next3ActionPerformed
-        System.out.println("Bleeding: "+ p.getBleeding() + "\n Pain: " +p.getPain()+ "\n Itchiness: " +p.getItchiness() +"\n Bulky: "+p.getBulky() );
+        System.out.println("Bleeding: "+ p.getBleeding() + "\n Pain: " +p.getPain()+ "\n Itchiness: " +p.getItchiness() +"\n Bulky: "+p.getBulky() + " Nombre: " +p.getName()); //SOLO PARA COMPROBAR QUE GUARDA
+        this.setVisible(false);
+        ExtraInfo extraInfoFr = new ExtraInfo();
+        extraInfoFr.setVisible(true);
         
     }//GEN-LAST:event_Next3ActionPerformed
                                
