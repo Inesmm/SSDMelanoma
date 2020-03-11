@@ -38,6 +38,10 @@ public class Feelings extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         No_Pain = new javax.swing.JButton();
+        Yes_Itch = new javax.swing.JButton();
+        No_Itch = new javax.swing.JButton();
+        Yes_Bulky = new javax.swing.JButton();
+        No_Bulky = new javax.swing.JButton();
         Next3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,37 +76,80 @@ public class Feelings extends javax.swing.JFrame {
         jLabel4.setText("Is your mole bulky");
 
         No_Pain.setText("No");
+        No_Pain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_PainActionPerformed(evt);
+            }
+        });
+
+        Yes_Itch.setText("Yes");
+        Yes_Itch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Yes_ItchActionPerformed(evt);
+            }
+        });
+
+        No_Itch.setText("No");
+        No_Itch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_ItchActionPerformed(evt);
+            }
+        });
+
+        Yes_Bulky.setText("Yes");
+        Yes_Bulky.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Yes_BulkyActionPerformed(evt);
+            }
+        });
+
+        No_Bulky.setText("No");
+        No_Bulky.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_BulkyActionPerformed(evt);
+            }
+        });
 
         Next3.setText("Next");
+        Next3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Next3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(113, 113, 113)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(Yes_Itch)
+                            .addGap(18, 18, 18)
+                            .addComponent(No_Itch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(Yes_Pain)
+                            .addGap(18, 18, 18)
+                            .addComponent(No_Pain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(Yes_Bleed)
+                            .addGap(18, 18, 18)
+                            .addComponent(No_Bleed, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
+                        .addGap(2, 2, 2)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(Yes_Pain)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(No_Pain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(Yes_Bleed)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(No_Bleed, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(jLabel4)))
-                .addGap(137, 157, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Next3)
+                            .addComponent(jLabel4)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Yes_Bulky)
+                                .addGap(18, 18, 18)
+                                .addComponent(No_Bulky, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                                .addComponent(Next3)))))
                 .addGap(38, 38, 38))
         );
         layout.setVerticalGroup(
@@ -122,10 +169,17 @@ public class Feelings extends javax.swing.JFrame {
                     .addComponent(No_Pain))
                 .addGap(27, 27, 27)
                 .addComponent(jLabel3)
-                .addGap(45, 45, 45)
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Yes_Itch)
+                    .addComponent(No_Itch))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Next3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Yes_Bulky)
+                    .addComponent(No_Bulky)
+                    .addComponent(Next3))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -143,6 +197,31 @@ public class Feelings extends javax.swing.JFrame {
     private void Yes_PainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_PainActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Yes_PainActionPerformed
+
+    private void No_PainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_PainActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_No_PainActionPerformed
+
+    private void Yes_ItchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_ItchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Yes_ItchActionPerformed
+
+    private void No_ItchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_ItchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_No_ItchActionPerformed
+
+    private void Yes_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_BulkyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Yes_BulkyActionPerformed
+
+    private void No_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_BulkyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_No_BulkyActionPerformed
+
+    private void Next3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next3ActionPerformed
+        
+        
+    }//GEN-LAST:event_Next3ActionPerformed
                                
 
     /**
@@ -183,8 +262,12 @@ public class Feelings extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Next3;
     private javax.swing.JButton No_Bleed;
+    private javax.swing.JButton No_Bulky;
+    private javax.swing.JButton No_Itch;
     private javax.swing.JButton No_Pain;
     private javax.swing.JButton Yes_Bleed;
+    private javax.swing.JButton Yes_Bulky;
+    private javax.swing.JButton Yes_Itch;
     private javax.swing.JButton Yes_Pain;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
