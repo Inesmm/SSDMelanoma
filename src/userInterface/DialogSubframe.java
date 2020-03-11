@@ -133,7 +133,7 @@ public class DialogSubframe extends javax.swing.JFrame {
             clips.load("PATH_FILE_JAVAA.clp"); //este omandp va a coger todas las reglas que tenemmos
             clips.reset();
             String bulky = (String) jComboBox1.getSelectedItem();
-            String assertion = "(assert (Patient ( bulky "+bulky+") (age "+age+") )";
+            String assertion = "(assert (Patient ( bulky "+bulky+") (age "+ age+") )";
             System.out.println("Assertinr:"+assertion);
             clips.eval(assertion);
             clips.run();

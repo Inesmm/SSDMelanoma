@@ -5,6 +5,9 @@
  */
 package userInterface;
 import dssmoles.Patient;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import net.sf.clipsrules.jni.CLIPSLoadException;
 import userInterface.Welcome;
 
 /**
@@ -159,8 +162,15 @@ public class ExtraInfo extends javax.swing.JFrame {
     }//GEN-LAST:event_SkinToneBoxActionPerformed
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
-        // TODO add your handling code here:
-        System.out.println(Welcome.p.getNumber_moles()+ Welcome.p.getSkin_tone()+ Welcome.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
+        try {
+            // TODO add your handling code here:
+            System.out.println(Welcome.p.getNumber_moles()+ Welcome.p.getSkin_tone()+ Welcome.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
+            this.setVisible(false);
+            DiagnosisFr diagnosisFr= new DiagnosisFr();
+            diagnosisFr.setVisible(true);
+        } catch (CLIPSLoadException ex) {
+            Logger.getLogger(ExtraInfo.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_NextButtonActionPerformed
 
     private void NoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoButtonActionPerformed

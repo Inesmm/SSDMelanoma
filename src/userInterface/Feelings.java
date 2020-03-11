@@ -5,7 +5,6 @@
  */
 package userInterface;
 
-import dssmoles.Patient;
 import static userInterface.Welcome.p;
 
 /**
