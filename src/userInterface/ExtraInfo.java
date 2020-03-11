@@ -160,7 +160,7 @@ public class ExtraInfo extends javax.swing.JFrame {
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // TODO add your handling code here:
-        System.out.println(Welcome.p.getSkin_tone()+ Welcome.p.getNumber_moles()+ Welcome.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
+        System.out.println(Welcome.p.getNumber_moles()+ Welcome.p.getSkin_tone()+ Welcome.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
     }//GEN-LAST:event_NextButtonActionPerformed
 
     private void NoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoButtonActionPerformed
