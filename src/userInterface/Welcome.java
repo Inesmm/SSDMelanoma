@@ -17,7 +17,7 @@ import net.sf.clipsrules.jni.Environment;
  * @author ainhoarey
  */
 public class Welcome extends javax.swing.JFrame {
-    Patient p = new Patient();
+    public static Patient p = new Patient();
     /**
      * Creates new form Welcome
      */
