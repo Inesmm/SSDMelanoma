@@ -38,42 +38,48 @@ public class DiagnosisFr extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldScore = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextAreaMessage = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Score:");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldScore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldScoreActionPerformed(evt);
             }
         });
 
         jLabel2.setText("Message: ");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextAreaMessage.setColumns(20);
+        jTextAreaMessage.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaMessage);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(65, 65, 65)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldScore, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel3)))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -82,41 +88,46 @@ public class DiagnosisFr extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextFieldScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldScoreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextFieldScoreActionPerformed
     private void clipsy () throws CLIPSLoadException{
-       try { 
-           Environment clips = new Environment();
-           clips.load("PATH_FILE_JAVAA.clp"); //este omandp va a coger todas las reglas que tenemmos
-           clips.reset();
-           String assertion = "(assert (Patient ( username "+p.getName()+")(symmetry "+p.getSymmetry()+")(sharp_borders "+p.getSharp_borders()+")(diameter "+p.getDiameter()+")(polychrome "
-                   +p.getPolychrome()+")(soft_texture "+p.getSoft_texture()+"bleeeding "+p.getBleeding()+")(itching "+p.getItchiness()+") (pain "+ p.getPain()+")( bulky "+p.getBulky()+")( age "
-                   +p.getAge()+")(n_moles "+p.getNumber_moles()+")(skin_tone "+p.getSkin_tone()+")(gender "+p.getGender()+")(family_history "+p.getFamily_history()+ ")";
-           System.out.println("Assertion:"+assertion);
-           clips.eval(assertion);
-           clips.run();
-           FactAddressValue patient = clips.findFact("Patient");
-           PrimitiveValue score = patient.getSlotValue("score");
-           System.out.print("Score: "+score);
-           jTextField1.setText(score.toString());
-           System.out.println("Tendria que enseñar el score");
-            
+       
+        try {
+            Environment clips = new Environment();
+            clips.load("PATH_FILE_JAVAA.clp"); //este omandp va a coger todas las reglas que tenemmos
+            clips.reset();
+            String assertion = "(assert (patient ( username "+p.getName()+")(symmetry "+p.getSymmetry()+")(sharp_borders "+p.getSharp_borders()+")(diameter "+p.getDiameter()+")(polychrome "+p.getPolychrome()+")(soft_texture "+p.getSoft_texture()+") ( bleeding "+p.getBleeding()+")(itching "+p.getItchiness()+") (pain "+ p.getPain()+")( bulky "+p.getBulky()+")( age "+p.getAge()+")(n_moles "+p.getNumber_moles()+")(skin_tone "+p.getSkin_tone()+")(gender "+p.getGender()+")(family_history "+p.getFamily_history()+ ")))";
+            System.out.println("Assertion:"+assertion);
+            clips.eval(assertion);
+            clips.run();
+            FactAddressValue patient = clips.findFact("patient");
+            String score = patient.getSlotValue("score").toString();
+            System.out.println("Score: "+score);
+            jTextFieldScore.setText(score);
+            String message = patient.getSlotValue("message").toString();
+            System.out.println("Message: "+ message);
+            jTextAreaMessage.setText(message);
         } catch (CLIPSException ex) {
-           System.out.println("Problema de clips");
-        
+            Logger.getLogger(DiagnosisFr.class.getName()).log(Level.SEVERE, null, ex);
         }
+           
+        
+          
+       
      
     }
     /**
@@ -161,8 +172,9 @@ public class DiagnosisFr extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextArea jTextAreaMessage;
+    private javax.swing.JTextField jTextFieldScore;
     // End of variables declaration//GEN-END:variables
 }

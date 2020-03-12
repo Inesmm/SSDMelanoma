@@ -125,27 +125,27 @@ public class DialogSubframe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        try {
-            // TODO add your handling code here:
-            
-            // Aqui pongo todas las variabels
-            Environment clips = new Environment ();
-            clips.load("PATH_FILE_JAVAA.clp"); //este omandp va a coger todas las reglas que tenemmos
-            clips.reset();
-            String bulky = (String) jComboBox1.getSelectedItem();
-            String assertion = "(assert (Patient ( bulky "+bulky+") (age "+ age+") )";
-            System.out.println("Assertinr:"+assertion);
-            clips.eval(assertion);
-            clips.run();
-            FactAddressValue patient = clips.findFact("Patient");
-            PrimitiveValue diagnosis = patient.getSlotValue("diagnosis");
-            System.out.print("Diagnosis:"+diagnosis);
-            jLabelResult.setText (diagnosis.toString);
-            PrimitiveValue message = patient.getSlotValue("message");
-        } catch (CLIPSException ex) {
-            Logger.getLogger(DialogSubframe.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+//        try {
+//            // TODO add your handling code here:
+////            
+////            // Aqui pongo todas las variabels
+////            Environment clips = new Environment ();
+////            clips.load("PATH_FILE_JAVAA.clp"); //este omandp va a coger todas las reglas que tenemmos
+////            clips.reset();
+////            String bulky = (String) jComboBox1.getSelectedItem();
+////            String assertion = "(assert (Patient ( bulky "+bulky+") (age "+ age+") )";
+////            System.out.println("Assertinr:"+lol);
+////            clips.eval(lol);
+////            clips.run();
+////            FactAddressValue patient = clips.findFact("Patient");
+////            PrimitiveValue diagnosis = patient.getSlotValue("diagnosis");
+////            System.out.print("Diagnosis:"+diagnosis);
+////            jLabelResult.setText (diagnosis.toString);
+////            PrimitiveValue message = patient.getSlotValue("message");
+//        } catch (CLIPSException ex) {
+//            Logger.getLogger(DialogSubframe.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
