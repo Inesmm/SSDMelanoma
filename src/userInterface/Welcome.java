@@ -132,9 +132,9 @@ public class Welcome extends javax.swing.JFrame {
 
     private void Next1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next1ActionPerformed
         // TODO add your handling code here:
-        /*p.setName(Name.getText());
-        p.setAge(Integer.parseInt(Age.getText()));
-        System.out.println(p.getName() + p.getAge() + p.getGender());*/
+        p.setName(Name_TextField.getText());
+        p.setAge(Integer.parseInt(Age_TextField.getText()));
+        System.out.println(p.getName() + p.getAge() + p.getGender());
         this.setVisible(false);
         Appearance appearanceFr = new Appearance();
         appearanceFr.setVisible(true);
