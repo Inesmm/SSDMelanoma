@@ -10,8 +10,27 @@ package dssmoles;
  * @author ainhoarey
  */
 public class Patient {
+    String name;
+    Integer age;
+    String gender;
+    String symmetry;
+    String sharp_borders;
+    String diameter;
+    String polychrome;
+    String soft_texture;
+    String bleeding;
+    String itchiness;
+    String pain;
+    String bulky;
+    String number_moles;
+    String skin_tone;
+    String family_history;
+    Integer final_score;
+    enum diagnosis {LOW, MEDIUM, HIGH};
+    String new_patient;
+    String message;
 
-    public Patient(String name, Integer age, String gender, String symmetry, String sharp_borders, String diameter, String polychrome, String soft_texture, String bleeding, String itchiness, String pain, String bulky, Integer number_moles, String skin_tone, String family_history, Integer final_score, String new_patient, String message) {
+    public Patient(String name, Integer age, String gender, String symmetry, String sharp_borders, String diameter, String polychrome, String soft_texture, String bleeding, String itchiness, String pain, String bulky, String number_moles, String skin_tone, String family_history, Integer final_score, String new_patient, String message) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -132,11 +151,11 @@ public class Patient {
         this.bulky = bulky;
     }
 
-    public Integer getNumber_moles() {
+    public String getNumber_moles() {
         return number_moles;
     }
 
-    public void setNumber_moles(Integer number_moles) {
+    public void setNumber_moles(String number_moles) {
         this.number_moles = number_moles;
     }
 
@@ -179,23 +198,5 @@ public class Patient {
     public void setMessage(String message) {
         this.message = message;
     }
-    String name;
-    Integer age;
-    String gender;
-    String symmetry;
-    String sharp_borders;
-    String diameter;
-    String polychrome;
-    String soft_texture;
-    String bleeding;
-    String itchiness;
-    String pain;
-    String bulky;
-    Integer number_moles;
-    String skin_tone;
-    String family_history;
-    Integer final_score;
-    enum diagnosis {LOW, MEDIUM, HIGH};
-    String new_patient;
-    String message;
+    
 }
