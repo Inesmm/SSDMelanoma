@@ -37,26 +37,26 @@
 
 (defrule symmetry_yes
 (declare (salience 15))
-?index <-(patient (symmetry yes) (score ?score) (symmetry_check FALSE))
+?index <-(patient (symmetry Yes) (score ?score) (symmetry_check FALSE))
 =>
 (modify ?index(score (+ ?score 0))(symmetry_check TRUE)))
 
 (defrule symmetry_no
 (declare (salience 15))
-?index <-(patient (symmetry no) (score ?score) (symmetry_check FALSE))
+?index <-(patient (symmetry No) (score ?score) (symmetry_check FALSE))
 =>
 (modify ?index(score (+ ?score 2)) (symmetry_check TRUE)))
 
 
 (defrule sharpborder_yes
 (declare (salience 15))
-?index <-(patient (sharp_borders yes) (score ?score) (sharp_borders_check FALSE))
+?index <-(patient (sharp_borders Yes) (score ?score) (sharp_borders_check FALSE))
 =>
 (modify ?index(score (+ ?score 0))(sharp_borders_check TRUE)))
 
 (defrule sharp_borders_no
 (declare (salience 15))
-?index <-(patient (sharp_borders no) (score ?score) (sharp_borders_check FALSE))
+?index <-(patient (sharp_borders No) (score ?score) (sharp_borders_check FALSE))
 =>
 (modify ?index(score (+ ?score 2)) (sharp_borders_check TRUE)))
 
@@ -64,13 +64,13 @@
 
 (defrule diameter_yes
 (declare (salience 15))
-?index <-(patient (diameter yes) (score ?score) (diameter_check FALSE))
+?index <-(patient (diameter Yes) (score ?score) (diameter_check FALSE))
 =>
 (modify ?index(score (+ ?score 1))(diameter_check TRUE)))
 
 (defrule diameter_no
 (declare (salience 15))
-?index <-(patient (diameter no) (score ?score) (diameter_check FALSE))
+?index <-(patient (diameter No) (score ?score) (diameter_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (diameter_check TRUE)))
 
@@ -78,40 +78,40 @@
 
 (defrule polychrome_yes
 (declare (salience 15))
-?index <-(patient (polychrome yes) (score ?score) (polychrome_check FALSE))
+?index <-(patient (polychrome Yes) (score ?score) (polychrome_check FALSE))
 =>
 (modify ?index(score (+ ?score 2))(polychrome_check TRUE)))
 
 (defrule polychrome_no
 (declare (salience 15))
-?index <-(patient (polychrome no) (score ?score) (polychrome_check FALSE))
+?index <-(patient (polychrome No) (score ?score) (polychrome_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (polychrome_check TRUE)))
 
 (defrule soft_texture_yes
 (declare (salience 15))
-?index <-(patient (soft_texture yes) (score ?score) (soft_texture_check FALSE))
+?index <-(patient (soft_texture Yes) (score ?score) (soft_texture_check FALSE))
 =>
 (modify ?index(score (+ ?score 0))(soft_texture_check TRUE)))
 
 
 (defrule soft_texture_no
 (declare (salience 15))
-?index <-(patient (soft_texture no) (score ?score) (soft_texture_check FALSE))
+?index <-(patient (soft_texture No) (score ?score) (soft_texture_check FALSE))
 =>
 (modify ?index(score (+ ?score 1)) (soft_texture_check TRUE)))
 
 
 (defrule bleeding_yes
 (declare (salience 15))
-?index <-(patient (bleeding yes) (score ?score) (bleeding_check FALSE))
+?index <-(patient (bleeding Yes) (score ?score) (bleeding_check FALSE))
 =>
 (modify ?index(score (+ ?score 2))(bleeding_check TRUE)))
 
 
 (defrule bleeding_no
 (declare (salience 15))
-?index <-(patient (bleeding no) (score ?score) (bleeding_check FALSE))
+?index <-(patient (bleeding No) (score ?score) (bleeding_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (bleeding_check TRUE)))
 
@@ -119,14 +119,14 @@
 
 (defrule itching_yes
 (declare (salience 15))
-?index <-(patient (itching yes) (score ?score) (itching_check FALSE))
+?index <-(patient (itching Yes) (score ?score) (itching_check FALSE))
 =>
 (modify ?index(score (+ ?score 1))(itching_check TRUE)))
 
 
 (defrule itching_no
 (declare (salience 15))
-?index <-(patient (itching no) (score ?score) (itching_check FALSE))
+?index <-(patient (itching No) (score ?score) (itching_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (itching_check TRUE)))
 
@@ -134,82 +134,82 @@
 
 ((defrule n_moles_less
 (declare (salience 15))
-?index <-(patient (n_moles less) (score ?score) (n_moles_check FALSE))
+?index <-(patient (n_moles Less) (score ?score) (n_moles_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (n_moles_check TRUE)))
 
 ((defrule n_moles_more
 (declare (salience 15))
-?index <-(patient (n_moles more) (score ?score) (n_moles_check FALSE))
+?index <-(patient (n_moles More) (score ?score) (n_moles_check FALSE))
 =>
 (modify ?index(score (+ ?score 1)) (n_moles_check TRUE)))
 
 ((defrule skin_tone_fair
 (declare (salience 15))
-?index <-(patient (skin_tone fair) (score ?score) (skin_tone_check FALSE))
+?index <-(patient (skin_tone Fair) (score ?score) (skin_tone_check FALSE))
 =>
 (modify ?index(score (+ ?score 2)) (skin_tone_check TRUE))) 
 
 ((defrule skin_tone_light
 (declare (salience 15))
-?index <-(patient (skin_tone light) (score ?score) (skin_tone_check FALSE))
+?index <-(patient (skin_tone Light brown) (score ?score) (skin_tone_check FALSE))
 =>
 (modify ?index(score (+ ?score 1)) (skin_tone_check TRUE))) 
 
 ((defrule skin_tone_dark
 (declare (salience 15))
-?index <-(patient (skin_tone dark) (score ?score) (skin_tone_check FALSE))
+?index <-(patient (skin_tone Dark brown) (score ?score) (skin_tone_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (skin_tone_check TRUE))) 
 
 ((defrule gender_male
 (declare (salience 15))
-?index <-(patient (gender male) (score ?score) (gender_check FALSE))
+?index <-(patient (gender Male) (score ?score) (gender_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (gender_check TRUE))) 
 
 ((defrule gender_female
 (declare (salience 15))
-?index <-(patient (gender female) (score ?score) (gender_check FALSE))
+?index <-(patient (gender Female) (score ?score) (gender_check FALSE))
 =>
 (modify ?index(score (+ ?score 1)) (gender_check TRUE))) 
 
 ((defrule family_history_yes
 (declare (salience 15))
-?index <-(patient (family_history yes) (score ?score) (family_history_check FALSE))
+?index <-(patient (family_history Yes) (score ?score) (family_history_check FALSE))
 =>
 (modify ?index(score (+ ?score 1)) (family_history_check TRUE))) 
 
 ((defrule family_history_no
 (declare (salience 15))
-?index <-(patient (family_history no) (score ?score) (family_history_check FALSE))
+?index <-(patient (family_history No) (score ?score) (family_history_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (family_history_check TRUE))) 
 
 
 (defrule pain_yes
 (declare (salience 15))
-?index <-(patient (pain yes) (score ?score) (pain_check FALSE))
+?index <-(patient (pain Yes) (score ?score) (pain_check FALSE))
 =>
 (modify ?index(score (+ ?score 2))(pain_check TRUE)))
 
 
 (defrule pain_no
 (declare (salience 15))
-?index <-(patient (pain no) (score ?score) (pain_check FALSE))
+?index <-(patient (pain No) (score ?score) (pain_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (pain_check TRUE)))
 
 (defrule bulky_yes
 (declare (salience 15))
-?index <-(patient (bulky yes) (score ?score) (bulky_check FALSE))
+?index <-(patient (bulky Yes) (score ?score) (bulky_check FALSE))
 =>
 (modify ?index(score (+ ?score 1))(bulky_check TRUE)))
 
 
 (defrule bulky_no
 (declare (salience 15))
-?index <-(patient (bulky no) (score ?score) (bulky_check FALSE))
+?index <-(patient (bulky No) (score ?score) (bulky_check FALSE))
 =>
 (modify ?index(score (+ ?score 0)) (bulky_check TRUE)))
 
