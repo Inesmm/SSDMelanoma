@@ -29,85 +29,33 @@ public class Feelings extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup_Bleeding = new javax.swing.ButtonGroup();
+        buttonGroup_Pain = new javax.swing.ButtonGroup();
+        buttonGroup_Itchiness = new javax.swing.ButtonGroup();
+        buttonGroup_Bulky = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        Yes_Bleed = new javax.swing.JButton();
-        No_Bleed = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        Yes_Pain = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        No_Pain = new javax.swing.JButton();
-        Yes_Itch = new javax.swing.JButton();
-        No_Itch = new javax.swing.JButton();
-        Yes_Bulky = new javax.swing.JButton();
-        No_Bulky = new javax.swing.JButton();
         Next3 = new javax.swing.JButton();
+        Yes_Bleed = new javax.swing.JRadioButton();
+        No_Bleed = new javax.swing.JRadioButton();
+        Yes_Pain = new javax.swing.JRadioButton();
+        No_Pain = new javax.swing.JRadioButton();
+        Yes_Itch = new javax.swing.JRadioButton();
+        No_Itch = new javax.swing.JRadioButton();
+        Yes_Bulky = new javax.swing.JRadioButton();
+        No_Bulky = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Does your mole bleed?");
 
-        Yes_Bleed.setText("Yes");
-        Yes_Bleed.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Yes_BleedActionPerformed(evt);
-            }
-        });
-
-        No_Bleed.setText("No");
-        No_Bleed.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                No_BleedActionPerformed(evt);
-            }
-        });
-
         jLabel2.setText("Do you have pain?");
-
-        Yes_Pain.setText("Yes");
-        Yes_Pain.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Yes_PainActionPerformed(evt);
-            }
-        });
 
         jLabel3.setText("Does the mole itch?");
 
         jLabel4.setText("Is your mole bulky");
-
-        No_Pain.setText("No");
-        No_Pain.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                No_PainActionPerformed(evt);
-            }
-        });
-
-        Yes_Itch.setText("Yes");
-        Yes_Itch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Yes_ItchActionPerformed(evt);
-            }
-        });
-
-        No_Itch.setText("No");
-        No_Itch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                No_ItchActionPerformed(evt);
-            }
-        });
-
-        Yes_Bulky.setText("Yes");
-        Yes_Bulky.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Yes_BulkyActionPerformed(evt);
-            }
-        });
-
-        No_Bulky.setText("No");
-        No_Bulky.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                No_BulkyActionPerformed(evt);
-            }
-        });
 
         Next3.setText("Next");
         Next3.addActionListener(new java.awt.event.ActionListener() {
@@ -116,42 +64,111 @@ public class Feelings extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup_Bleeding.add(Yes_Bleed);
+        Yes_Bleed.setText("Yes");
+        Yes_Bleed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Yes_BleedActionPerformed(evt);
+            }
+        });
+
+        buttonGroup_Bleeding.add(No_Bleed);
+        No_Bleed.setText("No");
+        No_Bleed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_BleedActionPerformed(evt);
+            }
+        });
+
+        buttonGroup_Pain.add(Yes_Pain);
+        Yes_Pain.setText("Yes");
+        Yes_Pain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Yes_PainActionPerformed(evt);
+            }
+        });
+
+        buttonGroup_Pain.add(No_Pain);
+        No_Pain.setText("No");
+        No_Pain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_PainActionPerformed(evt);
+            }
+        });
+
+        buttonGroup_Itchiness.add(Yes_Itch);
+        Yes_Itch.setText("Yes");
+        Yes_Itch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Yes_ItchActionPerformed(evt);
+            }
+        });
+
+        buttonGroup_Itchiness.add(No_Itch);
+        No_Itch.setText("No");
+        No_Itch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_ItchActionPerformed(evt);
+            }
+        });
+
+        buttonGroup_Bulky.add(Yes_Bulky);
+        Yes_Bulky.setText("Yes");
+        Yes_Bulky.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Yes_BulkyActionPerformed(evt);
+            }
+        });
+
+        buttonGroup_Bulky.add(No_Bulky);
+        No_Bulky.setText("No");
+        No_Bulky.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_BulkyActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(124, 124, 124)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2)
-                        .addComponent(jLabel3)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(Yes_Itch)
-                                .addGap(18, 18, 18)
-                                .addComponent(No_Itch, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(Yes_Pain)
-                                .addGap(18, 18, 18)
-                                .addComponent(No_Pain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Yes_Bleed)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(No_Bleed, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(Yes_Bulky)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(No_Bulky, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel4))))
-                    .addComponent(jLabel1))
-                .addContainerGap(144, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Next3)
                 .addGap(23, 23, 23))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(124, 124, 124)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(Yes_Bleed)
+                                .addGap(18, 18, 18)
+                                .addComponent(No_Bleed)
+                                .addGap(13, 13, 13))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(9, 9, 9)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(Yes_Bulky)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(No_Bulky))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(Yes_Itch)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(No_Itch))))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(4, 4, 4)
+                                    .addComponent(Yes_Pain)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(No_Pain))))
+                        .addComponent(jLabel1))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,25 +179,25 @@ public class Feelings extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Bleed)
                     .addComponent(No_Bleed))
-                .addGap(28, 28, 28)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel2)
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Pain)
                     .addComponent(No_Pain))
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Itch)
                     .addComponent(No_Itch))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Bulky)
                     .addComponent(No_Bulky))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(Next3)
                 .addGap(18, 18, 18))
         );
@@ -188,8 +205,16 @@ public class Feelings extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void Next3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next3ActionPerformed
+        System.out.println("Bleeding: "+ p.getBleeding() + "\n Pain: " +p.getPain()+ "\n Itchiness: " +p.getItchiness() +"\n Bulky: "+p.getBulky() + " Nombre: " +p.getName()); //SOLO PARA COMPROBAR QUE GUARDA
+        this.setVisible(false);
+        ExtraInfo extraInfoFr = new ExtraInfo();
+        extraInfoFr.setVisible(true);
+        
+    }//GEN-LAST:event_Next3ActionPerformed
+
     private void Yes_BleedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_BleedActionPerformed
-        String bleeding = (String) Yes_Bleed.getActionCommand();
+       String bleeding = (String) Yes_Bleed.getActionCommand();
         Welcome.p.setBleeding(bleeding);
     }//GEN-LAST:event_Yes_BleedActionPerformed
 
@@ -227,14 +252,6 @@ public class Feelings extends javax.swing.JFrame {
         String bulky = (String) No_Bulky.getActionCommand();
         Welcome.p.setBulky(bulky);
     }//GEN-LAST:event_No_BulkyActionPerformed
-
-    private void Next3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next3ActionPerformed
-        System.out.println("Bleeding: "+ p.getBleeding() + "\n Pain: " +p.getPain()+ "\n Itchiness: " +p.getItchiness() +"\n Bulky: "+p.getBulky() + " Nombre: " +p.getName()); //SOLO PARA COMPROBAR QUE GUARDA
-        this.setVisible(false);
-        ExtraInfo extraInfoFr = new ExtraInfo();
-        extraInfoFr.setVisible(true);
-        
-    }//GEN-LAST:event_Next3ActionPerformed
                                
 
     /**
@@ -274,14 +291,18 @@ public class Feelings extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Next3;
-    private javax.swing.JButton No_Bleed;
-    private javax.swing.JButton No_Bulky;
-    private javax.swing.JButton No_Itch;
-    private javax.swing.JButton No_Pain;
-    private javax.swing.JButton Yes_Bleed;
-    private javax.swing.JButton Yes_Bulky;
-    private javax.swing.JButton Yes_Itch;
-    private javax.swing.JButton Yes_Pain;
+    private javax.swing.JRadioButton No_Bleed;
+    private javax.swing.JRadioButton No_Bulky;
+    private javax.swing.JRadioButton No_Itch;
+    private javax.swing.JRadioButton No_Pain;
+    private javax.swing.JRadioButton Yes_Bleed;
+    private javax.swing.JRadioButton Yes_Bulky;
+    private javax.swing.JRadioButton Yes_Itch;
+    private javax.swing.JRadioButton Yes_Pain;
+    private javax.swing.ButtonGroup buttonGroup_Bleeding;
+    private javax.swing.ButtonGroup buttonGroup_Bulky;
+    private javax.swing.ButtonGroup buttonGroup_Itchiness;
+    private javax.swing.ButtonGroup buttonGroup_Pain;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -32,15 +32,17 @@ public class ExtraInfo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup_number_moles = new javax.swing.ButtonGroup();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        More_Moles = new javax.swing.JButton();
-        Less_Moles = new javax.swing.JButton();
         SkinTone = new javax.swing.JComboBox<>();
-        Yes_Family = new javax.swing.JButton();
-        No_Family = new javax.swing.JButton();
         NextButton = new javax.swing.JButton();
+        More_Moles = new javax.swing.JRadioButton();
+        Less_Moles = new javax.swing.JRadioButton();
+        Yes_Family = new javax.swing.JRadioButton();
+        No_Family = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,20 +52,6 @@ public class ExtraInfo extends javax.swing.JFrame {
 
         jLabel3.setText("Are there any cases of melanoma in your family?");
 
-        More_Moles.setText("More");
-        More_Moles.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                More_MolesActionPerformed(evt);
-            }
-        });
-
-        Less_Moles.setText("Less");
-        Less_Moles.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Less_MolesActionPerformed(evt);
-            }
-        });
-
         SkinTone.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-Select option-", "Fair", "Light brown", "Dark brown" }));
         SkinTone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +59,30 @@ public class ExtraInfo extends javax.swing.JFrame {
             }
         });
 
+        NextButton.setText("Next");
+        NextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NextButtonActionPerformed(evt);
+            }
+        });
+
+        buttonGroup_number_moles.add(More_Moles);
+        More_Moles.setText("More");
+        More_Moles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                More_MolesActionPerformed(evt);
+            }
+        });
+
+        buttonGroup_number_moles.add(Less_Moles);
+        Less_Moles.setText("Less");
+        Less_Moles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Less_MolesActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(Yes_Family);
         Yes_Family.setText("Yes");
         Yes_Family.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,17 +90,11 @@ public class ExtraInfo extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(No_Family);
         No_Family.setText("No");
         No_Family.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 No_FamilyActionPerformed(evt);
-            }
-        });
-
-        NextButton.setText("Next");
-        NextButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NextButtonActionPerformed(evt);
             }
         });
 
@@ -101,65 +107,58 @@ public class ExtraInfo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(88, 88, 88))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(71, 71, 71)
-                                    .addComponent(Yes_Family)
-                                    .addGap(27, 27, 27)
-                                    .addComponent(No_Family))
-                                .addComponent(jLabel3))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(8, 8, 8)
+                                .addComponent(jLabel1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
                                         .addComponent(More_Moles)
                                         .addGap(18, 18, 18)
-                                        .addComponent(Less_Moles)
-                                        .addGap(57, 57, 57))
-                                    .addComponent(jLabel1))))
+                                        .addComponent(Less_Moles))
+                                    .addComponent(jLabel2)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(88, 88, 88)))
                         .addGap(55, 55, 55))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(NextButton)
                         .addGap(23, 23, 23))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(138, 138, 138)
+                .addComponent(Yes_Family)
+                .addGap(18, 18, 18)
+                .addComponent(No_Family)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(43, 43, 43)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(More_Moles)
                     .addComponent(Less_Moles))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Family)
                     .addComponent(No_Family))
-                .addGap(34, 34, 34)
+                .addGap(41, 41, 41)
                 .addComponent(NextButton)
                 .addGap(19, 19, 19))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Yes_FamilyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_FamilyActionPerformed
-        // TODO add your handling code here:
-        String family_history = (String) Yes_Family.getActionCommand();
-        Welcome.p.setFamily_history(family_history);
-    }//GEN-LAST:event_Yes_FamilyActionPerformed
 
     private void SkinToneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkinToneActionPerformed
         // TODO add your handling code here:
@@ -179,23 +178,25 @@ public class ExtraInfo extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_NextButtonActionPerformed
 
-    private void No_FamilyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_FamilyActionPerformed
-        // TODO add your handling code here:
-        String family_history = (String) No_Family.getActionCommand();
-        Welcome.p.setFamily_history(family_history);
-    }//GEN-LAST:event_No_FamilyActionPerformed
+    private void More_MolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_More_MolesActionPerformed
+        String number_moles = (String) More_Moles.getActionCommand();
+        Welcome.p.setNumber_moles(number_moles);
+    }//GEN-LAST:event_More_MolesActionPerformed
 
     private void Less_MolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Less_MolesActionPerformed
-        // TODO add your handling code here:
         String number_moles = (String) Less_Moles.getActionCommand();
         Welcome.p.setNumber_moles(number_moles);
     }//GEN-LAST:event_Less_MolesActionPerformed
 
-    private void More_MolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_More_MolesActionPerformed
-        // TODO add your handling code here:        
-        String number_moles = (String) More_Moles.getActionCommand();
-        Welcome.p.setNumber_moles(number_moles);
-    }//GEN-LAST:event_More_MolesActionPerformed
+    private void Yes_FamilyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_FamilyActionPerformed
+        String family_history = (String) Yes_Family.getActionCommand();
+        Welcome.p.setFamily_history(family_history);
+    }//GEN-LAST:event_Yes_FamilyActionPerformed
+
+    private void No_FamilyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_FamilyActionPerformed
+         String family_history = (String) No_Family.getActionCommand();
+        Welcome.p.setFamily_history(family_history);
+    }//GEN-LAST:event_No_FamilyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,12 +234,14 @@ public class ExtraInfo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Less_Moles;
-    private javax.swing.JButton More_Moles;
+    private javax.swing.JRadioButton Less_Moles;
+    private javax.swing.JRadioButton More_Moles;
     private javax.swing.JButton NextButton;
-    private javax.swing.JButton No_Family;
+    private javax.swing.JRadioButton No_Family;
     private javax.swing.JComboBox<String> SkinTone;
-    private javax.swing.JButton Yes_Family;
+    private javax.swing.JRadioButton Yes_Family;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup_number_moles;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
