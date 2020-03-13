@@ -5,6 +5,8 @@
  */
 package userInterface;
 
+import static userInterface.Welcome.p;
+
 /**
  *
  * @author enriquetunon
@@ -28,34 +30,33 @@ public class Appearance extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        SharpBordersYesButton = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Yes_Sharp = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        SymmetricYesButton = new javax.swing.JButton();
-        SymmetricNoButton = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        SharpBorderNoButtons = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        Yes_Symmetric = new javax.swing.JButton();
+        Yes_Diameter = new javax.swing.JButton();
+        Yes_Soft = new javax.swing.JButton();
+        Yes_Polychrome = new javax.swing.JButton();
+        No_Soft = new javax.swing.JButton();
+        No_Symmetric1 = new javax.swing.JButton();
+        No_Polychrome = new javax.swing.JButton();
+        No_Sharp = new javax.swing.JButton();
+        No_Diameter = new javax.swing.JButton();
+        Next = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Is it symmetric?");
 
-        SharpBordersYesButton.setText("Yes");
-        SharpBordersYesButton.addActionListener(new java.awt.event.ActionListener() {
+        Yes_Sharp.setText("Yes");
+        Yes_Sharp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SharpBordersYesButtonActionPerformed(evt);
+                Yes_SharpActionPerformed(evt);
             }
         });
-
-        jButton2.setText("No");
 
         jLabel2.setText("Does it have sharp borders?");
 
@@ -67,41 +68,75 @@ public class Appearance extends javax.swing.JFrame {
 
         jLabel6.setText("Is it soft to the touch?");
 
-        SymmetricYesButton.setText("Yes");
-        SymmetricYesButton.addActionListener(new java.awt.event.ActionListener() {
+        Yes_Symmetric.setText("Yes");
+        Yes_Symmetric.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SymmetricYesButtonActionPerformed(evt);
+                Yes_SymmetricActionPerformed(evt);
             }
         });
 
-        SymmetricNoButton.setText("No");
-
-        jButton5.setText("Yes");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        Yes_Diameter.setText("Yes");
+        Yes_Diameter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                Yes_DiameterActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Yes");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        Yes_Soft.setText("Yes");
+        Yes_Soft.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                Yes_SoftActionPerformed(evt);
             }
         });
 
-        jButton7.setText("Yes");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        Yes_Polychrome.setText("Yes");
+        Yes_Polychrome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                Yes_PolychromeActionPerformed(evt);
             }
         });
 
-        jButton8.setText("No");
+        No_Soft.setText("No");
+        No_Soft.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_SoftActionPerformed(evt);
+            }
+        });
 
-        SharpBorderNoButtons.setText("No");
+        No_Symmetric1.setText("No");
+        No_Symmetric1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_Symmetric1ActionPerformed(evt);
+            }
+        });
 
-        jButton10.setText("No");
+        No_Polychrome.setText("No");
+        No_Polychrome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_PolychromeActionPerformed(evt);
+            }
+        });
+
+        No_Sharp.setText("No");
+        No_Sharp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_SharpActionPerformed(evt);
+            }
+        });
+
+        No_Diameter.setText("No");
+        No_Diameter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_DiameterActionPerformed(evt);
+            }
+        });
+
+        Next.setText("Next");
+        Next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NextActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,113 +145,158 @@ public class Appearance extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addComponent(jButton5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(SharpBordersYesButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SharpBorderNoButtons))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(jButton7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton10))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
+                        .addGap(102, 102, 102)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addComponent(Yes_Diameter)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(No_Diameter, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel5)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(Yes_Sharp)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(No_Sharp, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel6)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Yes_Soft)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(No_Soft, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Yes_Polychrome)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(No_Polychrome, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jButton6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton8))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(SymmetricYesButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SymmetricNoButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(jLabel6)))
-                .addContainerGap(79, Short.MAX_VALUE))
+                        .addGap(152, 152, 152)
+                        .addComponent(jLabel1)))
+                .addContainerGap(102, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Yes_Symmetric)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(No_Symmetric1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(148, 148, 148))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Next)
+                        .addGap(25, 25, 25))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(143, 143, 143)
                     .addComponent(jLabel4)
-                    .addContainerGap(133, Short.MAX_VALUE)))
+                    .addContainerGap(169, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(34, 34, 34)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SymmetricNoButton)
-                    .addComponent(SymmetricYesButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                    .addComponent(Yes_Symmetric)
+                    .addComponent(No_Symmetric1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SharpBordersYesButton)
-                    .addComponent(SharpBorderNoButtons))
+                    .addComponent(Yes_Sharp)
+                    .addComponent(No_Sharp))
                 .addGap(42, 42, 42)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jButton5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(jLabel6)
+                    .addComponent(Yes_Diameter)
+                    .addComponent(No_Diameter))
+                .addGap(42, 42, 42)
+                .addComponent(jLabel5)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton8))
-                .addGap(17, 17, 17))
+                    .addComponent(Yes_Polychrome)
+                    .addComponent(No_Polychrome))
+                .addGap(44, 44, 44)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Yes_Soft)
+                    .addComponent(No_Soft))
+                .addGap(31, 31, 31)
+                .addComponent(Next)
+                .addGap(19, 19, 19))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(120, 120, 120)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(412, Short.MAX_VALUE)))
+                    .addContainerGap(448, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SharpBordersYesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SharpBordersYesButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SharpBordersYesButtonActionPerformed
+    private void Yes_SharpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_SharpActionPerformed
+        String sharp_borders = (String) Yes_Sharp.getActionCommand();
+        Welcome.p.setSharp_borders(sharp_borders);
+    }//GEN-LAST:event_Yes_SharpActionPerformed
 
-    private void SymmetricYesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SymmetricYesButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SymmetricYesButtonActionPerformed
+    private void Yes_SymmetricActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_SymmetricActionPerformed
+        String symmetric = (String) Yes_Symmetric.getActionCommand();
+        Welcome.p.setSymmetry(symmetric);
+    }//GEN-LAST:event_Yes_SymmetricActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void Yes_DiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_DiameterActionPerformed
+       String diameter = (String) Yes_Diameter.getActionCommand();
+        Welcome.p.setDiameter(diameter);
+    }//GEN-LAST:event_Yes_DiameterActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void Yes_SoftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_SoftActionPerformed
+        String soft_texture = (String) Yes_Soft.getActionCommand();
+        Welcome.p.setSoft_texture(soft_texture);
+    }//GEN-LAST:event_Yes_SoftActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void Yes_PolychromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_PolychromeActionPerformed
+        String polychrome = (String) Yes_Polychrome.getActionCommand();
+        Welcome.p.setPolychrome(polychrome);
+    }//GEN-LAST:event_Yes_PolychromeActionPerformed
+
+    private void No_SoftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_SoftActionPerformed
+        String soft_texture = (String) No_Soft.getActionCommand();
+        Welcome.p.setSoft_texture(soft_texture);
+    }//GEN-LAST:event_No_SoftActionPerformed
+
+    private void No_Symmetric1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_Symmetric1ActionPerformed
+        String symmetric = (String) No_Soft.getActionCommand();
+        Welcome.p.setSymmetry(symmetric);
+    }//GEN-LAST:event_No_Symmetric1ActionPerformed
+
+    private void No_PolychromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_PolychromeActionPerformed
+        String polychrome = (String) No_Soft.getActionCommand();
+        Welcome.p.setPolychrome(polychrome);
+    }//GEN-LAST:event_No_PolychromeActionPerformed
+
+    private void No_SharpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_SharpActionPerformed
+        String sharp_borders = (String) No_Soft.getActionCommand();
+        Welcome.p.setSharp_borders(sharp_borders);
+    }//GEN-LAST:event_No_SharpActionPerformed
+
+    private void No_DiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_DiameterActionPerformed
+        String diameter = (String) No_Soft.getActionCommand();
+        Welcome.p.setDiameter(diameter);
+    }//GEN-LAST:event_No_DiameterActionPerformed
+
+    private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
+       // TODO add your handling code here:
+        this.setVisible(false);
+        Feelings feelingsFr = new Feelings();
+        feelingsFr.setVisible(true);
+    }//GEN-LAST:event_NextActionPerformed
 
     /**
      * @param args the command line arguments
@@ -254,16 +334,17 @@ public class Appearance extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SharpBorderNoButtons;
-    private javax.swing.JButton SharpBordersYesButton;
-    private javax.swing.JButton SymmetricNoButton;
-    private javax.swing.JButton SymmetricYesButton;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton Next;
+    private javax.swing.JButton No_Diameter;
+    private javax.swing.JButton No_Polychrome;
+    private javax.swing.JButton No_Sharp;
+    private javax.swing.JButton No_Soft;
+    private javax.swing.JButton No_Symmetric1;
+    private javax.swing.JButton Yes_Diameter;
+    private javax.swing.JButton Yes_Polychrome;
+    private javax.swing.JButton Yes_Sharp;
+    private javax.swing.JButton Yes_Soft;
+    private javax.swing.JButton Yes_Symmetric;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
