@@ -22,7 +22,7 @@
 (slot age_check (default FALSE))
 (slot n_moles)
 (slot n_moles_check (default FALSE))
-(slot skin_tone)
+(multislot skin_tone)
 (slot skin_tone_check (default FALSE))
 (slot gender)
 (slot gender_check (default FALSE))
