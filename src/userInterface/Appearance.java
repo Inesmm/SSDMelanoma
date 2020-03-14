@@ -5,6 +5,7 @@
  */
 package userInterface;
 
+import javax.swing.JOptionPane;
 import static userInterface.Welcome.p;
 
 /**
@@ -252,9 +253,35 @@ public class Appearance extends javax.swing.JFrame {
 
     private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
        // TODO add your handling code here:
-        this.setVisible(false);
-        Feelings feelingsFr = new Feelings();
-        feelingsFr.setVisible(true);
+        if(Yes_Symmetry.isSelected()==false && No_Symmetry.isSelected()==false){
+            JOptionPane.showMessageDialog(null, "No option was selected for symmetry. Please check again.");
+        }
+        else{
+            if(Yes_Sharp.isSelected()==false && No_Sharp.isSelected()==false){
+                JOptionPane.showMessageDialog(null, "No option was selected for sharp borders. Please check again.");
+            }
+            else{
+                if(Yes_Diameter.isSelected()==false && No_Diameter.isSelected()==false){
+                    JOptionPane.showMessageDialog(null, "No option was selected for diameter. Please check again.");
+                }
+                else{
+                    if(Yes_Polychrome.isSelected()==false && No_Polychrome.isSelected()==false){
+                    JOptionPane.showMessageDialog(null, "No option was selected for polychrome. Please check again.");
+                    }
+                        else{
+                            if(Yes_Soft.isSelected()==false && No_Soft.isSelected()==false){
+                            JOptionPane.showMessageDialog(null, "No option was selected for softness. Please check again.");
+                            }
+                        else{
+                            System.out.println("Symmetry: " + p.getSymmetry() + "\n Sharp borders: " +p.getSharp_borders()+ "\n Diameter: " +p.getDiameter()+ "\n Polychrome: " +p.getPolychrome()+ " Softness: " +p.getSoft_texture()); //SOLO PARA COMPROBAR QUE GUARDA
+                            this.setVisible(false);
+                            Feelings feelingsFr = new Feelings();
+                            feelingsFr.setVisible(true);
+                        }
+                    }
+                }
+            }
+        }   
     }//GEN-LAST:event_NextActionPerformed
 
     private void Yes_SymmetryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_SymmetryActionPerformed
