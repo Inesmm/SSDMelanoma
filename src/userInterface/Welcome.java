@@ -144,6 +144,15 @@ public class Welcome extends javax.swing.JFrame {
                 if(Gender.getSelectedItem() == "-Select option-"){
                     JOptionPane.showMessageDialog(null, "Please select a gender.");
                 }else{
+                    String age = Age_TextField.getText();
+                    try{
+                       int age2 = Integer.parseInt(age);
+                    }
+                    catch(NumberFormatException e){
+                        JOptionPane.showMessageDialog(null, "Please introduce a number.");
+                    }
+                    p.setName(Name_TextField.getText());
+                    p.setAge(Integer.parseInt(Age_TextField.getText()));
                     System.out.println(p.getName() + p.getAge() + p.getGender());
                     this.setVisible(false);
                     Appearance appearanceFr = new Appearance();
@@ -152,7 +161,7 @@ public class Welcome extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_Next1ActionPerformed
-
+    
     private void Name_TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Name_TextFieldActionPerformed
         String name = Name_TextField.getText();
         p.setName(name);
