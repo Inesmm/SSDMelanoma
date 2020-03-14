@@ -25,7 +25,7 @@ public class DiagnosisFr extends javax.swing.JFrame {
      */
     public DiagnosisFr() throws CLIPSLoadException {
         initComponents();
-        clipsy();
+        clips();
     }
 
     /**
@@ -43,6 +43,7 @@ public class DiagnosisFr extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Message_TextArea = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
+        Exit_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,6 +61,13 @@ public class DiagnosisFr extends javax.swing.JFrame {
         Message_TextArea.setRows(5);
         jScrollPane1.setViewportView(Message_TextArea);
 
+        Exit_Button.setText("Exit");
+        Exit_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Exit_ButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -71,16 +79,19 @@ public class DiagnosisFr extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(33, 33, 33)
-                                .addComponent(Score_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(jLabel1)
+                        .addGap(33, 33, 33)
+                        .addComponent(Score_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(45, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Exit_Button)
+                .addGap(158, 158, 158))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,9 +102,11 @@ public class DiagnosisFr extends javax.swing.JFrame {
                     .addComponent(Score_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(Exit_Button)
+                .addGap(10, 10, 10)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
@@ -102,13 +115,17 @@ public class DiagnosisFr extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Score_TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Score_TextFieldActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_Score_TextFieldActionPerformed
-    private void clipsy () throws CLIPSLoadException{
+
+    private void Exit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Exit_ButtonActionPerformed
+
+    }//GEN-LAST:event_Exit_ButtonActionPerformed
+    private void clips () throws CLIPSLoadException{
        
         try {
             Environment clips = new Environment();
-            clips.load("PATH_FILE_JAVAA.clp"); //este omandp va a coger todas las reglas que tenemmos
+            clips.load("PATH_FILE_JAVAA.clp"); 
             clips.reset();
             String assertion = "(assert (patient ( username "+p.getName()+")(symmetry "+p.getSymmetry()+")(sharp_borders "+p.getSharp_borders()+")(diameter "+p.getDiameter()+")(polychrome "+p.getPolychrome()+")(soft_texture "+p.getSoft_texture()+") ( bleeding "+p.getBleeding()+")(itching "+p.getItchiness()+") (pain "+ p.getPain()+")( bulky "+p.getBulky()+")( age "+p.getAge()+")(n_moles "+p.getNumber_moles()+")(skin_tone "+p.getSkin_tone()+")(gender "+p.getGender()+")(family_history "+p.getFamily_history()+ ")))";
             System.out.println("Assertion:"+assertion);
@@ -121,6 +138,8 @@ public class DiagnosisFr extends javax.swing.JFrame {
             String message = patient.getSlotValue("message").toString();
             System.out.println("Message: "+ message);
             Message_TextArea.setText(message);
+            Message_TextArea.setLineWrap(true);
+            
         } catch (CLIPSException ex) {
             Logger.getLogger(DiagnosisFr.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -170,6 +189,7 @@ public class DiagnosisFr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Exit_Button;
     private javax.swing.JTextArea Message_TextArea;
     private javax.swing.JTextField Score_TextField;
     private javax.swing.JLabel jLabel1;

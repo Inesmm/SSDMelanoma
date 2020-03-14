@@ -168,7 +168,7 @@ public class Welcome extends javax.swing.JFrame {
     }//GEN-LAST:event_Name_TextFieldActionPerformed
 
     private void Age_TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Age_TextFieldActionPerformed
-        // TODO add your handling code here:
+
         Integer age = Integer.parseInt(Age_TextField.getText());
         p.setAge(age);
     }//GEN-LAST:event_Age_TextFieldActionPerformed
