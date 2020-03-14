@@ -8,6 +8,8 @@ package userInterface;
 import dssmoles.Patient;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import net.sf.clipsrules.jni.CLIPSException;
 import net.sf.clipsrules.jni.CLIPSLoadException;
 import net.sf.clipsrules.jni.Environment;
@@ -125,24 +127,33 @@ public class Welcome extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void GenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenderActionPerformed
-        // TODO add your handling code here:
         String gender = (String) Gender.getSelectedItem();
         p.setGender(gender);
     }//GEN-LAST:event_GenderActionPerformed
 
     private void Next1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next1ActionPerformed
-        // TODO add your handling code here:
-        p.setName(Name_TextField.getText());
-        p.setAge(Integer.parseInt(Age_TextField.getText()));
-        System.out.println(p.getName() + p.getAge() + p.getGender());
-        this.setVisible(false);
-        Appearance appearanceFr = new Appearance();
-        appearanceFr.setVisible(true);
-
+        
+        if (Name_TextField.getText().isEmpty()){
+             JOptionPane.showMessageDialog(null, "Please introduce your name.");
+        }
+        else { 
+            if(Age_TextField.getText().isEmpty()){
+                 JOptionPane.showMessageDialog(null, "Please introduce your age.");
+            }
+            else{
+                if(Gender.getSelectedItem() == "-Select option-"){
+                    JOptionPane.showMessageDialog(null, "Please select a gender.");
+                }else{
+                    System.out.println(p.getName() + p.getAge() + p.getGender());
+                    this.setVisible(false);
+                    Appearance appearanceFr = new Appearance();
+                    appearanceFr.setVisible(true);
+                }
+            }
+        }
     }//GEN-LAST:event_Next1ActionPerformed
 
     private void Name_TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Name_TextFieldActionPerformed
-        // TODO add your handling code here:
         String name = Name_TextField.getText();
         p.setName(name);
     }//GEN-LAST:event_Name_TextFieldActionPerformed
