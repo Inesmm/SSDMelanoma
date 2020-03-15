@@ -119,7 +119,9 @@ public class DiagnosisFr extends javax.swing.JFrame {
     }//GEN-LAST:event_Score_TextFieldActionPerformed
 
     private void Exit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Exit_ButtonActionPerformed
-
+            this.setVisible(false);
+            NewPatientFr newPatientFr= new NewPatientFr();
+            newPatientFr.setVisible(true);
     }//GEN-LAST:event_Exit_ButtonActionPerformed
     private void clips () throws CLIPSLoadException{
        
