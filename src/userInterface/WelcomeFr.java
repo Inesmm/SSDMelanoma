@@ -155,8 +155,8 @@ public class WelcomeFr extends javax.swing.JFrame {
                     p.setAge(Integer.parseInt(Age_TextField.getText()));
                     System.out.println(p.getName() + p.getAge() + p.getGender());
                     this.setVisible(false);
-                    Appearance appearanceFr = new Appearance();
-                    appearanceFr.setVisible(true);
+                    SymmetryFr symmetryFr = new SymmetryFr();
+                    symmetryFr.setVisible(true);
                 }
             }
         }
