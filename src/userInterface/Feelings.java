@@ -6,7 +6,7 @@
 package userInterface;
 
 import javax.swing.JOptionPane;
-import static userInterface.Welcome.p;
+import static userInterface.WelcomeFr.p;
 
 /**
  *
@@ -238,42 +238,42 @@ public class Feelings extends javax.swing.JFrame {
 
     private void Yes_BleedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_BleedActionPerformed
        String bleeding = (String) Yes_Bleed.getActionCommand();
-       Welcome.p.setBleeding(bleeding);
+       WelcomeFr.p.setBleeding(bleeding);
     }//GEN-LAST:event_Yes_BleedActionPerformed
 
     private void No_BleedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_BleedActionPerformed
         String bleeding = (String) No_Bleed.getActionCommand();
-        Welcome.p.setBleeding(bleeding);
+        WelcomeFr.p.setBleeding(bleeding);
     }//GEN-LAST:event_No_BleedActionPerformed
 
     private void Yes_PainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_PainActionPerformed
         String pain = (String) Yes_Pain.getActionCommand();
-        Welcome.p.setPain(pain);
+        WelcomeFr.p.setPain(pain);
     }//GEN-LAST:event_Yes_PainActionPerformed
 
     private void No_PainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_PainActionPerformed
         String pain = (String) No_Pain.getActionCommand();
-        Welcome.p.setPain(pain);
+        WelcomeFr.p.setPain(pain);
     }//GEN-LAST:event_No_PainActionPerformed
 
     private void Yes_ItchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_ItchActionPerformed
         String itchiness = (String) Yes_Itch.getActionCommand();
-        Welcome.p.setItchiness(itchiness);
+        WelcomeFr.p.setItchiness(itchiness);
     }//GEN-LAST:event_Yes_ItchActionPerformed
 
     private void No_ItchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_ItchActionPerformed
         String itchiness = (String) No_Itch.getActionCommand();
-        Welcome.p.setItchiness(itchiness);
+        WelcomeFr.p.setItchiness(itchiness);
     }//GEN-LAST:event_No_ItchActionPerformed
 
     private void Yes_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_BulkyActionPerformed
         String bulky = (String) Yes_Bulky.getActionCommand();
-        Welcome.p.setBulky(bulky);
+        WelcomeFr.p.setBulky(bulky);
     }//GEN-LAST:event_Yes_BulkyActionPerformed
 
     private void No_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_BulkyActionPerformed
         String bulky = (String) No_Bulky.getActionCommand();
-        Welcome.p.setBulky(bulky);
+        WelcomeFr.p.setBulky(bulky);
     }//GEN-LAST:event_No_BulkyActionPerformed
                                
 

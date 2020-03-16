@@ -6,7 +6,7 @@
 package userInterface;
 
 import javax.swing.JOptionPane;
-import static userInterface.Welcome.p;
+import static userInterface.WelcomeFr.p;
 
 /**
  *
@@ -286,52 +286,52 @@ public class Appearance extends javax.swing.JFrame {
 
     private void Yes_SymmetryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_SymmetryActionPerformed
         String symmetric = (String) Yes_Symmetry.getActionCommand();
-        Welcome.p.setSymmetry(symmetric);
+        WelcomeFr.p.setSymmetry(symmetric);
     }//GEN-LAST:event_Yes_SymmetryActionPerformed
 
     private void No_SymmetryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_SymmetryActionPerformed
         String symmetric = (String) No_Symmetry.getActionCommand();
-        Welcome.p.setSymmetry(symmetric);
+        WelcomeFr.p.setSymmetry(symmetric);
     }//GEN-LAST:event_No_SymmetryActionPerformed
 
     private void Yes_SharpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_SharpActionPerformed
         String sharp_borders = (String) Yes_Sharp.getActionCommand();
-        Welcome.p.setSharp_borders(sharp_borders);
+        WelcomeFr.p.setSharp_borders(sharp_borders);
     }//GEN-LAST:event_Yes_SharpActionPerformed
 
     private void No_SharpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_SharpActionPerformed
         String sharp_borders = (String) No_Sharp.getActionCommand();
-        Welcome.p.setSharp_borders(sharp_borders);
+        WelcomeFr.p.setSharp_borders(sharp_borders);
     }//GEN-LAST:event_No_SharpActionPerformed
 
     private void Yes_DiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_DiameterActionPerformed
        String diameter = (String) Yes_Diameter.getActionCommand();
-        Welcome.p.setDiameter(diameter);
+        WelcomeFr.p.setDiameter(diameter);
     }//GEN-LAST:event_Yes_DiameterActionPerformed
 
     private void No_DiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_DiameterActionPerformed
         String diameter = (String) No_Diameter.getActionCommand();
-        Welcome.p.setDiameter(diameter);
+        WelcomeFr.p.setDiameter(diameter);
     }//GEN-LAST:event_No_DiameterActionPerformed
 
     private void Yes_PolychromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_PolychromeActionPerformed
         String polychrome = (String) Yes_Polychrome.getActionCommand();
-        Welcome.p.setPolychrome(polychrome);
+        WelcomeFr.p.setPolychrome(polychrome);
     }//GEN-LAST:event_Yes_PolychromeActionPerformed
 
     private void No_PolychromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_PolychromeActionPerformed
         String polychrome = (String) No_Polychrome.getActionCommand();
-        Welcome.p.setPolychrome(polychrome);
+        WelcomeFr.p.setPolychrome(polychrome);
     }//GEN-LAST:event_No_PolychromeActionPerformed
 
     private void Yes_SoftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_SoftActionPerformed
         String soft_texture = (String) Yes_Soft.getActionCommand();
-        Welcome.p.setSoft_texture(soft_texture);
+        WelcomeFr.p.setSoft_texture(soft_texture);
     }//GEN-LAST:event_Yes_SoftActionPerformed
 
     private void No_SoftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_SoftActionPerformed
         String soft_texture = (String) No_Soft.getActionCommand();
-        Welcome.p.setSoft_texture(soft_texture);
+        WelcomeFr.p.setSoft_texture(soft_texture);
     }//GEN-LAST:event_No_SoftActionPerformed
 
     /**

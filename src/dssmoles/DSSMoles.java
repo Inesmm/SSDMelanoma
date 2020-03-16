@@ -5,7 +5,7 @@
  */
 package dssmoles;
 
-import userInterface.Welcome;
+import userInterface.WelcomeFr;
 
 /**
  *
@@ -18,7 +18,7 @@ public class DSSMoles {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Welcome welcomeFr = new Welcome();
+        WelcomeFr welcomeFr = new WelcomeFr();
         welcomeFr.setVisible(true);
     }
     

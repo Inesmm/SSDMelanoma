@@ -82,7 +82,7 @@ public class NewPatientFr extends javax.swing.JFrame {
 
     private void Yes_PatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_PatientActionPerformed
         this.setVisible(false);
-        Welcome welcomeFr= new Welcome();
+        WelcomeFr welcomeFr= new WelcomeFr();
         welcomeFr.setVisible(true);
     }//GEN-LAST:event_Yes_PatientActionPerformed
 

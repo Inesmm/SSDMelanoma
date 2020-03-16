@@ -12,7 +12,7 @@ import net.sf.clipsrules.jni.CLIPSLoadException;
 import net.sf.clipsrules.jni.Environment;
 import net.sf.clipsrules.jni.FactAddressValue;
 import net.sf.clipsrules.jni.PrimitiveValue;
-import static userInterface.Welcome.p;
+import static userInterface.WelcomeFr.p;
 
 /**
  *

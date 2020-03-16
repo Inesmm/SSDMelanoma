@@ -8,7 +8,7 @@ import dssmoles.Patient;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import net.sf.clipsrules.jni.CLIPSLoadException;
-import userInterface.Welcome;
+import userInterface.WelcomeFr;
 
 /**
  *
@@ -163,13 +163,13 @@ public class ExtraInfo extends javax.swing.JFrame {
     private void SkinToneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkinToneActionPerformed
         // TODO add your handling code here:
         String skin_tone = (String) SkinTone.getSelectedItem();
-        Welcome.p.setSkin_tone(skin_tone);
+        WelcomeFr.p.setSkin_tone(skin_tone);
     }//GEN-LAST:event_SkinToneActionPerformed
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         try {
             // TODO add your handling code here:
-            System.out.println(Welcome.p.getNumber_moles()+ Welcome.p.getSkin_tone()+ Welcome.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
+            System.out.println(WelcomeFr.p.getNumber_moles()+ WelcomeFr.p.getSkin_tone()+ WelcomeFr.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
             this.setVisible(false);
             DiagnosisFr diagnosisFr= new DiagnosisFr();
             diagnosisFr.setVisible(true);
@@ -180,22 +180,22 @@ public class ExtraInfo extends javax.swing.JFrame {
 
     private void More_MolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_More_MolesActionPerformed
         String number_moles = (String) More_Moles.getActionCommand();
-        Welcome.p.setNumber_moles(number_moles);
+        WelcomeFr.p.setNumber_moles(number_moles);
     }//GEN-LAST:event_More_MolesActionPerformed
 
     private void Less_MolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Less_MolesActionPerformed
         String number_moles = (String) Less_Moles.getActionCommand();
-        Welcome.p.setNumber_moles(number_moles);
+        WelcomeFr.p.setNumber_moles(number_moles);
     }//GEN-LAST:event_Less_MolesActionPerformed
 
     private void Yes_FamilyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_FamilyActionPerformed
         String family_history = (String) Yes_Family.getActionCommand();
-        Welcome.p.setFamily_history(family_history);
+        WelcomeFr.p.setFamily_history(family_history);
     }//GEN-LAST:event_Yes_FamilyActionPerformed
 
     private void No_FamilyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_FamilyActionPerformed
          String family_history = (String) No_Family.getActionCommand();
-        Welcome.p.setFamily_history(family_history);
+        WelcomeFr.p.setFamily_history(family_history);
     }//GEN-LAST:event_No_FamilyActionPerformed
 
     /**
