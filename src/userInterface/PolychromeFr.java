@@ -144,9 +144,7 @@ public class PolychromeFr extends javax.swing.JFrame {
         }
         else{                 
             System.out.println("\n Polychrome: " +p.getPolychrome()); //SOLO PARA COMPROBAR QUE GUARDA
-            this.setVisible(false);
-            Feelings feelingsFr = new Feelings();
-            feelingsFr.setVisible(true);
+            //UNIR CON BULKY FRAME !!!!!!!!!!1
         }
     }//GEN-LAST:event_Next_PolychromeActionPerformed
 

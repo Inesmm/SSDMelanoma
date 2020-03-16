@@ -133,7 +133,9 @@ public class DiameterFr extends javax.swing.JFrame {
         }
         else{
              System.out.println("\n Diameter: " +p.getDiameter()); //SOLO PARA COMPROBAR QUE GUARDA
-             //UNIR CON EL FRAME BULKY !!!!!!!!
+             this.setVisible(false);
+             PolychromeFr polychromeFr = new PolychromeFr();
+             polychromeFr.setVisible(true);
         }                         
     }//GEN-LAST:event_Next_DiameterActionPerformed
 
