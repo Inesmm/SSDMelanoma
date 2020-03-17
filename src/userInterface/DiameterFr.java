@@ -46,7 +46,7 @@ public class DiameterFr extends javax.swing.JFrame {
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Is the diameter grater than 6mm?");
+        jLabel1.setText("Is the diameter greater than 6mm?");
 
         Yes_Diameter.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Yes_Diameter.setText("Yes");
@@ -87,7 +87,7 @@ public class DiameterFr extends javax.swing.JFrame {
                         .addComponent(No_Diameter)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(23, 23, 23))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()

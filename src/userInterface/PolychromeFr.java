@@ -78,14 +78,13 @@ public class PolychromeFr extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Next_Polychrome)
                                 .addGap(70, 70, 70))
                             .addGroup(layout.createSequentialGroup()
@@ -144,7 +143,9 @@ public class PolychromeFr extends javax.swing.JFrame {
         }
         else{                 
             System.out.println("\n Polychrome: " +p.getPolychrome()); //SOLO PARA COMPROBAR QUE GUARDA
-            //UNIR CON BULKY FRAME !!!!!!!!!!1
+            this.setVisible(false);
+            BulkyFr bulkyFr = new BulkyFr();
+            bulkyFr.setVisible(true);
         }
     }//GEN-LAST:event_Next_PolychromeActionPerformed
 
