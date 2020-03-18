@@ -60,14 +60,12 @@ public class BulkyFr extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bulky.jpg"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jLabel1.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         jLabel1.setMaximumSize(new java.awt.Dimension(306, 174));
         jLabel1.setMinimumSize(new java.awt.Dimension(306, 174));
         jLabel1.setPreferredSize(new java.awt.Dimension(306, 174));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/normal_bulky.jpg"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jLabel2.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
 
         Next_Bulky.setText("Next");
         Next_Bulky.addActionListener(new java.awt.event.ActionListener() {

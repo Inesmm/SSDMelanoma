@@ -103,13 +103,13 @@ public class SharpBordersFr extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Yes_SharpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_SharpActionPerformed
-        String symmetric = (String) Yes_Sharp.getActionCommand();
-        WelcomeFr.p.setSymmetry(symmetric);
+        String sharp_borders = (String) Yes_Sharp.getActionCommand();
+        WelcomeFr.p.setSymmetry(sharp_borders);
     }//GEN-LAST:event_Yes_SharpActionPerformed
 
     private void No_SharpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_SharpActionPerformed
-        String symmetric = (String) No_Sharp.getActionCommand();
-        WelcomeFr.p.setSymmetry(symmetric);
+        String sharp_borders = (String) No_Sharp.getActionCommand();
+        WelcomeFr.p.setSymmetry(sharp_borders);
     }//GEN-LAST:event_No_SharpActionPerformed
 
     private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
@@ -119,7 +119,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No option was selected for sharp borders. Please check again.");
         }
         else{
-            System.out.println("\n Sharp borders: " +p.getSharp_borders());
+            System.out.println("\n Sharp borders: " + p.getSharp_borders());
             this.setVisible(false);
             DiameterFr diameterFr = new DiameterFr();
             diameterFr.setVisible(true);
