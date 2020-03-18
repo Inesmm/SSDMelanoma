@@ -17,7 +17,7 @@ import static userInterface.WelcomeFr.p;
 public class SharpBordersFr extends javax.swing.JFrame {
 
     /**
-     * Creates new form SharpBorders
+     * Creates new form SharpBordersFr
      */
     public SharpBordersFr() {
         initComponents();
@@ -67,36 +67,32 @@ public class SharpBordersFr extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addComponent(jLabel)
-                .addContainerGap(125, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Next)
-                .addGap(24, 24, 24))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(151, 151, 151)
-                    .addComponent(Yes_Sharp)
-                    .addGap(18, 18, 18)
-                    .addComponent(No_Sharp)
-                    .addContainerGap(151, Short.MAX_VALUE)))
+                .addContainerGap(113, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Yes_Sharp)
+                        .addGap(18, 18, 18)
+                        .addComponent(No_Sharp)
+                        .addGap(163, 163, 163))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel)
+                        .addGap(124, 124, 124))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Next)
+                        .addGap(19, 19, 19))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(57, 57, 57)
                 .addComponent(jLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(No_Sharp)
+                    .addComponent(Yes_Sharp))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
                 .addComponent(Next)
-                .addGap(20, 20, 20))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(141, 141, 141)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Yes_Sharp)
-                        .addComponent(No_Sharp))
-                    .addContainerGap(141, Short.MAX_VALUE)))
+                .addGap(22, 22, 22))
         );
 
         pack();
@@ -104,12 +100,12 @@ public class SharpBordersFr extends javax.swing.JFrame {
 
     private void Yes_SharpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_SharpActionPerformed
         String sharp_borders = (String) Yes_Sharp.getActionCommand();
-        WelcomeFr.p.setSymmetry(sharp_borders);
+        WelcomeFr.p.setSharp_borders(sharp_borders);
     }//GEN-LAST:event_Yes_SharpActionPerformed
 
     private void No_SharpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_SharpActionPerformed
         String sharp_borders = (String) No_Sharp.getActionCommand();
-        WelcomeFr.p.setSymmetry(sharp_borders);
+        WelcomeFr.p.setSharp_borders(sharp_borders);
     }//GEN-LAST:event_No_SharpActionPerformed
 
     private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
@@ -123,8 +119,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
             this.setVisible(false);
             DiameterFr diameterFr = new DiameterFr();
             diameterFr.setVisible(true);
-            }
-
+        }
     }//GEN-LAST:event_NextActionPerformed
 
     /**
