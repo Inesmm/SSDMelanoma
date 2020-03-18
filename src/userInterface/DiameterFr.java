@@ -5,6 +5,9 @@
  */
 package userInterface;
 
+import javax.swing.JOptionPane;
+import static userInterface.WelcomeFr.p;
+
 /**
  *
  * @author inesu
@@ -27,21 +30,98 @@ public class DiameterFr extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        Yes_Diameter = new javax.swing.JButton();
+        No_Diameter = new javax.swing.JButton();
+        Next_Diameter = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setForeground(java.awt.Color.lightGray);
+        setMaximumSize(new java.awt.Dimension(500, 500));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Is the diameter greater than 6mm?");
+
+        Yes_Diameter.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Yes_Diameter.setText("Yes");
+        Yes_Diameter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Yes_DiameterActionPerformed(evt);
+            }
+        });
+
+        No_Diameter.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        No_Diameter.setText("No");
+        No_Diameter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_DiameterActionPerformed(evt);
+            }
+        });
+
+        Next_Diameter.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Next_Diameter.setText("Next");
+        Next_Diameter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Next_DiameterActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(410, 410, 410)
+                .addComponent(Yes_Diameter)
+                .addGap(49, 49, 49)
+                .addComponent(No_Diameter)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(331, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(23, 23, 23))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Next_Diameter, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(jLabel1)
+                .addGap(72, 72, 72)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Yes_Diameter)
+                    .addComponent(No_Diameter))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                .addComponent(Next_Diameter)
+                .addGap(38, 38, 38))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Yes_DiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_DiameterActionPerformed
+        String diameter = (String) Yes_Diameter.getActionCommand();
+        WelcomeFr.p.setDiameter(diameter);
+    }//GEN-LAST:event_Yes_DiameterActionPerformed
+
+    private void No_DiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_DiameterActionPerformed
+        String diameter = (String) No_Diameter.getActionCommand();
+        WelcomeFr.p.setDiameter(diameter);
+    }//GEN-LAST:event_No_DiameterActionPerformed
+
+    private void Next_DiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next_DiameterActionPerformed
+        if(Yes_Diameter.isSelected()==false && No_Diameter.isSelected()==false){
+            JOptionPane.showMessageDialog(null, "No option was selected for diameter. Please check again.");
+        } else{
+             System.out.println("\n Diameter: " +p.getDiameter()); //SOLO PARA COMPROBAR QUE GUARDA
+             this.setVisible(false);
+             PolychromeFr polychromeFr = new PolychromeFr();
+             polychromeFr.setVisible(true);
+        }                         
+    }//GEN-LAST:event_Next_DiameterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +159,9 @@ public class DiameterFr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Next_Diameter;
+    private javax.swing.JButton No_Diameter;
+    private javax.swing.JButton Yes_Diameter;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

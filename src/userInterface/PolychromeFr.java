@@ -5,6 +5,9 @@
  */
 package userInterface;
 
+import javax.swing.JOptionPane;
+import static userInterface.WelcomeFr.p;
+
 /**
  *
  * @author inesu
@@ -27,21 +30,124 @@ public class PolychromeFr extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        Yes_Polychrome = new javax.swing.JButton();
+        No_Polychrome = new javax.swing.JButton();
+        Next_Polychrome = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/policromia.jpeg"))); // NOI18N
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/normalcolor.jpeg"))); // NOI18N
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("Does it have more than one color?");
+
+        Yes_Polychrome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Yes_Polychrome.setText("Yes");
+        Yes_Polychrome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Yes_PolychromeActionPerformed(evt);
+            }
+        });
+
+        No_Polychrome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        No_Polychrome.setText("No");
+        No_Polychrome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_PolychromeActionPerformed(evt);
+            }
+        });
+
+        Next_Polychrome.setText("Next");
+        Next_Polychrome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Next_PolychromeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(Next_Polychrome)
+                                .addGap(70, 70, 70))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(86, 86, 86)
+                                .addComponent(Yes_Polychrome)
+                                .addGap(26, 26, 26)
+                                .addComponent(No_Polychrome)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(jLabel3)
+                        .addGap(0, 49, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
+                        .addComponent(Next_Polychrome))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(Yes_Polychrome)
+                                    .addComponent(No_Polychrome))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGap(51, 51, 51))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Yes_PolychromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_PolychromeActionPerformed
+        String polychrome = (String) Yes_Polychrome.getActionCommand();
+        WelcomeFr.p.setPolychrome(polychrome);
+    }//GEN-LAST:event_Yes_PolychromeActionPerformed
+
+    private void No_PolychromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_PolychromeActionPerformed
+        String polychrome = (String) No_Polychrome.getActionCommand();
+        WelcomeFr.p.setPolychrome(polychrome);
+    }//GEN-LAST:event_No_PolychromeActionPerformed
+
+    private void Next_PolychromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next_PolychromeActionPerformed
+       if(Yes_Polychrome.isSelected()==false && No_Polychrome.isSelected()==false){
+            JOptionPane.showMessageDialog(null, "No option was selected for polychrome. Please check again.");
+        }
+        else{                 
+            System.out.println("\n Polychrome: " +p.getPolychrome()); //SOLO PARA COMPROBAR QUE GUARDA
+            this.setVisible(false);
+            BulkyFr bulkyFr = new BulkyFr();
+            bulkyFr.setVisible(true);
+        }
+    }//GEN-LAST:event_Next_PolychromeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +185,11 @@ public class PolychromeFr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Next_Polychrome;
+    private javax.swing.JButton No_Polychrome;
+    private javax.swing.JButton Yes_Polychrome;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
