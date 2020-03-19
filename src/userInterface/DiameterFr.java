@@ -39,8 +39,8 @@ public class DiameterFr extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(java.awt.Color.lightGray);
-        setMaximumSize(new java.awt.Dimension(500, 500));
-        setPreferredSize(new java.awt.Dimension(650, 400));
+        setMaximumSize(null);
+        setPreferredSize(new java.awt.Dimension(750, 400));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Is the diameter greater than 6mm?");
@@ -102,7 +102,7 @@ public class DiameterFr extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
+                        .addGap(136, 136, 136)
                         .addComponent(jLabel1)
                         .addGap(64, 64, 64)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

@@ -29,34 +29,19 @@ public class BulkyFr extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Bulky_ButtonGroup = new javax.swing.ButtonGroup();
         jLabel3 = new javax.swing.JLabel();
-        Yes_Bulky = new javax.swing.JButton();
-        No_Bulky = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         Next_Bulky = new javax.swing.JButton();
+        Yes_Bulky = new javax.swing.JRadioButton();
+        No_Bulky = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(708, 445));
+        setPreferredSize(new java.awt.Dimension(709, 443));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Does it have a bulky appearance?");
-
-        Yes_Bulky.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        Yes_Bulky.setText("Yes");
-        Yes_Bulky.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Yes_BulkyActionPerformed(evt);
-            }
-        });
-
-        No_Bulky.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        No_Bulky.setText("No");
-        No_Bulky.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                No_BulkyActionPerformed(evt);
-            }
-        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bulky.jpg"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -67,10 +52,29 @@ public class BulkyFr extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/normal_bulky.jpg"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
+        Next_Bulky.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Next_Bulky.setText("Next");
         Next_Bulky.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Next_BulkyActionPerformed(evt);
+            }
+        });
+
+        Bulky_ButtonGroup.add(Yes_Bulky);
+        Yes_Bulky.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Yes_Bulky.setText("Yes");
+        Yes_Bulky.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Yes_BulkyActionPerformed(evt);
+            }
+        });
+
+        Bulky_ButtonGroup.add(No_Bulky);
+        No_Bulky.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        No_Bulky.setText("No");
+        No_Bulky.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                No_BulkyActionPerformed(evt);
             }
         });
 
@@ -79,64 +83,49 @@ public class BulkyFr extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(144, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Yes_Bulky)
-                            .addComponent(No_Bulky))
-                        .addGap(100, 100, 100))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Next_Bulky)
-                        .addGap(20, 20, 20))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(177, 177, 177)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(Next_Bulky)
+                            .addComponent(jLabel3))
+                        .addGap(20, 20, 20))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(Yes_Bulky)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(No_Bulky)
+                        .addGap(65, 65, 65))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Next_Bulky)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel3)
-                                .addGap(34, 34, 34)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(164, 164, 164)
-                                .addComponent(Yes_Bulky)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(82, 82, 82)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(170, 170, 170)
+                            .addComponent(Next_Bulky))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(51, 51, 51)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(Yes_Bulky)
                                 .addComponent(No_Bulky)))))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Yes_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_BulkyActionPerformed
-        String bulky = (String) Yes_Bulky.getActionCommand();
-        WelcomeFr.p.setBulky(bulky);
-    }//GEN-LAST:event_Yes_BulkyActionPerformed
-
-    private void No_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_BulkyActionPerformed
-        // TODO add your handling code here:
-        String bulky = (String) No_Bulky.getActionCommand();
-        WelcomeFr.p.setBulky(bulky);
-    }//GEN-LAST:event_No_BulkyActionPerformed
 
     private void Next_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next_BulkyActionPerformed
         if(Yes_Bulky.isSelected()==false && No_Bulky.isSelected()==false){
@@ -149,6 +138,16 @@ public class BulkyFr extends javax.swing.JFrame {
             feelingsFr.setVisible(true);
         }
     }//GEN-LAST:event_Next_BulkyActionPerformed
+
+    private void Yes_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_BulkyActionPerformed
+        String bulky = (String) Yes_Bulky.getActionCommand();
+        WelcomeFr.p.setDiameter(bulky);
+    }//GEN-LAST:event_Yes_BulkyActionPerformed
+
+    private void No_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_BulkyActionPerformed
+        String bulky = (String) No_Bulky.getActionCommand();
+        WelcomeFr.p.setDiameter(bulky);
+    }//GEN-LAST:event_No_BulkyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,9 +185,10 @@ public class BulkyFr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup Bulky_ButtonGroup;
     private javax.swing.JButton Next_Bulky;
-    private javax.swing.JButton No_Bulky;
-    private javax.swing.JButton Yes_Bulky;
+    private javax.swing.JRadioButton No_Bulky;
+    private javax.swing.JRadioButton Yes_Bulky;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
