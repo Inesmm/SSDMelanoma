@@ -5,9 +5,12 @@
  */
 package userInterface;
 import dssmoles.Patient;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.border.LineBorder;
 import net.sf.clipsrules.jni.CLIPSLoadException;
 import userInterface.WelcomeFr;
 
@@ -176,10 +179,25 @@ public class ExtraInfo extends javax.swing.JFrame {
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         try {
             // TODO add your handling code here:
-            System.out.println(WelcomeFr.p.getNumber_moles()+ WelcomeFr.p.getSkin_tone()+ WelcomeFr.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
-            this.setVisible(false);
-            DiagnosisFr diagnosisFr= new DiagnosisFr();
-            diagnosisFr.setVisible(true);
+            if (More_Moles.isSelected()==false && Less_Moles.isSelected()==false){
+                JOptionPane.showMessageDialog(null, "No option was selected for number of moles. Please check again.");
+            }
+            else{
+                if(SkinTone.getSelectedItem() == "-Select option-"){
+                    JOptionPane.showMessageDialog(null, "No option was selected for skin tone. Please check again.");
+                }
+                else{
+                    if(Yes_Family.isSelected()==false && No_Family.isSelected()==false){
+                        JOptionPane.showMessageDialog(null, "No option was selected for family history. Please check again.");
+                    }
+                    else{
+                        System.out.println(WelcomeFr.p.getNumber_moles()+ WelcomeFr.p.getSkin_tone()+ WelcomeFr.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
+                        this.setVisible(false);
+                        DiagnosisFr diagnosisFr= new DiagnosisFr();
+                        diagnosisFr.setVisible(true);
+                    }
+                }
+            }
         } catch (CLIPSLoadException ex) {
             Logger.getLogger(ExtraInfo.class.getName()).log(Level.SEVERE, null, ex);
         }
