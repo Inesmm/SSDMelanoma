@@ -5,6 +5,7 @@
  */
 package userInterface;
 
+import java.awt.Dimension;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import net.sf.clipsrules.jni.CLIPSException;
@@ -25,7 +26,9 @@ public class DiagnosisFr extends javax.swing.JFrame {
      */
     public DiagnosisFr() throws CLIPSLoadException {
         initComponents();
+        this.setSize(new Dimension(706, 447));
         clips();
+        
     }
 
     /**

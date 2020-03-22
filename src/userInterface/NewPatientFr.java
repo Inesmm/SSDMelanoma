@@ -5,6 +5,8 @@
  */
 package userInterface;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author inesu
@@ -16,6 +18,7 @@ public class NewPatientFr extends javax.swing.JFrame {
      */
     public NewPatientFr() {
         initComponents();
+        this.setSize(new Dimension(677, 414));
     }
 
     /**
@@ -53,28 +56,27 @@ public class NewPatientFr extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Yes_Patient)
+                .addGap(46, 46, 46)
+                .addComponent(No_Patient, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(273, 273, 273))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(Yes_Patient)
-                        .addGap(28, 28, 28)
-                        .addComponent(No_Patient, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jLabel1)))
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addGap(223, 223, 223)
+                .addComponent(jLabel1)
+                .addContainerGap(230, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
+                .addGap(140, 140, 140)
                 .addComponent(jLabel1)
-                .addGap(28, 28, 28)
+                .addGap(82, 82, 82)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Patient)
                     .addComponent(No_Patient))
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         pack();

@@ -33,7 +33,7 @@
                   <Component id="jLabel2" pref="266" max="32767" attributes="0"/>
                   <Component id="jLabel1" pref="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="60" max="32767" attributes="0"/>
+              <EmptySpace pref="28" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Next_Polychrome" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -74,7 +74,7 @@
                           <Component id="Yes_Polychrome" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="No_Polychrome" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="109" max="32767" attributes="0"/>
+                      <EmptySpace pref="82" max="32767" attributes="0"/>
                       <Component id="Next_Polychrome" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>

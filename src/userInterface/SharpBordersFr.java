@@ -6,6 +6,7 @@
 package userInterface;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
 import static userInterface.WelcomeFr.p;
@@ -21,6 +22,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
      */
     public SharpBordersFr() {
         initComponents();
+        this.setSize(new Dimension(677, 414));
     }
 
     /**
