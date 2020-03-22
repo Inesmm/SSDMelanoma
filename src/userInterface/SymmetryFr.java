@@ -22,7 +22,7 @@ public class SymmetryFr extends javax.swing.JFrame {
      */
     public SymmetryFr() {
         initComponents();
-        this.setSize(new Dimension(677, 414));
+        this.setSize(new Dimension(700,413));
     }
 
     /**
@@ -71,7 +71,7 @@ public class SymmetryFr extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(148, 148, 148)
                 .addComponent(jLabel)
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addContainerGap(462, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Next)
@@ -82,14 +82,14 @@ public class SymmetryFr extends javax.swing.JFrame {
                     .addComponent(Yes_Symmetry)
                     .addGap(18, 18, 18)
                     .addComponent(No_Symmetry)
-                    .addContainerGap(151, Short.MAX_VALUE)))
+                    .addContainerGap(439, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 195, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 309, Short.MAX_VALUE)
                 .addComponent(Next)
                 .addGap(24, 24, 24))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,7 +98,7 @@ public class SymmetryFr extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Yes_Symmetry)
                         .addComponent(No_Symmetry))
-                    .addContainerGap(141, Short.MAX_VALUE)))
+                    .addContainerGap(247, Short.MAX_VALUE)))
         );
 
         pack();

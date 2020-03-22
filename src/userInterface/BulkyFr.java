@@ -19,7 +19,7 @@ public class BulkyFr extends javax.swing.JFrame {
      */
     public BulkyFr() {
         initComponents();
-        this.setSize(new Dimension(677, 414));
+        this.setSize(new Dimension(700,413));
     }
 
     /**
@@ -95,7 +95,7 @@ public class BulkyFr extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Next_Bulky)
                             .addComponent(jLabel3))
-                        .addContainerGap(53, Short.MAX_VALUE))
+                        .addContainerGap(84, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addComponent(Yes_Bulky)
@@ -122,7 +122,7 @@ public class BulkyFr extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Yes_Bulky)
                             .addComponent(No_Bulky))))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();

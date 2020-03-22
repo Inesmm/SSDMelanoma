@@ -29,7 +29,7 @@ public class WelcomeFr extends javax.swing.JFrame {
      */
     public WelcomeFr() {
         initComponents();
-        this.setSize(new Dimension(715,500));
+        this.setSize(new Dimension(715, 444));
         ImageIcon image = new ImageIcon("src/images/movil_check.jpg");
         Icon icono = new ImageIcon(image.getImage().getScaledInstance(jLabelMedico.getWidth(), jLabelMedico.getHeight(), Image.SCALE_DEFAULT));
         jLabelMedico.setIcon(icono);
@@ -55,6 +55,8 @@ public class WelcomeFr extends javax.swing.JFrame {
         jLabelMedico = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 255));
+        setResizable(false);
 
         Name_TextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,10 +64,13 @@ public class WelcomeFr extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Name");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Age");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Gender");
 
         Gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-Select option-", "Male", "Female" }));
@@ -81,6 +86,7 @@ public class WelcomeFr extends javax.swing.JFrame {
             }
         });
 
+        Next1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Next1.setText("Next");
         Next1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,13 +94,15 @@ public class WelcomeFr extends javax.swing.JFrame {
             }
         });
 
+        jLabelMedico.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabelMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
