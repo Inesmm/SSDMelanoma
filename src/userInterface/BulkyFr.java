@@ -141,12 +141,12 @@ public class BulkyFr extends javax.swing.JFrame {
 
     private void Yes_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Yes_BulkyActionPerformed
         String bulky = (String) Yes_Bulky.getActionCommand();
-        WelcomeFr.p.setDiameter(bulky);
+        WelcomeFr.p.setBulky(bulky);
     }//GEN-LAST:event_Yes_BulkyActionPerformed
 
     private void No_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_BulkyActionPerformed
         String bulky = (String) No_Bulky.getActionCommand();
-        WelcomeFr.p.setDiameter(bulky);
+        WelcomeFr.p.setBulky(bulky);
     }//GEN-LAST:event_No_BulkyActionPerformed
 
     /**
