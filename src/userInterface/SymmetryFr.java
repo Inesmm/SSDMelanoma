@@ -45,6 +45,7 @@ public class SymmetryFr extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Symmetry_buttonGroup = new javax.swing.ButtonGroup();
         jLabel = new javax.swing.JLabel();
         Yes_Symmetry = new javax.swing.JRadioButton();
         No_Symmetry = new javax.swing.JRadioButton();
@@ -57,6 +58,7 @@ public class SymmetryFr extends javax.swing.JFrame {
         jLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel.setText("Is it symmetric?");
 
+        Symmetry_buttonGroup.add(Yes_Symmetry);
         Yes_Symmetry.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Yes_Symmetry.setText("Yes");
         Yes_Symmetry.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +67,7 @@ public class SymmetryFr extends javax.swing.JFrame {
             }
         });
 
+        Symmetry_buttonGroup.add(No_Symmetry);
         No_Symmetry.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         No_Symmetry.setText("No");
         No_Symmetry.addActionListener(new java.awt.event.ActionListener() {
@@ -196,6 +199,7 @@ public class SymmetryFr extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Next;
     private javax.swing.JRadioButton No_Symmetry;
+    private javax.swing.ButtonGroup Symmetry_buttonGroup;
     private javax.swing.JRadioButton Yes_Symmetry;
     private javax.swing.JLabel jLabel;
     private javax.swing.JLabel jLabel1;
