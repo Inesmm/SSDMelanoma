@@ -25,7 +25,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
      */
     public SharpBordersFr() {
         initComponents();
-        this.setSize(new Dimension(700,413));
+        this.setSize(new Dimension(700, 450));
         ImageIcon yes_sharpborders = new ImageIcon("src/images/Yes_SharpBorders.png");
         Icon icono1 = new ImageIcon(yes_sharpborders.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
         jLabel1.setIcon(icono1);
@@ -44,6 +44,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel = new javax.swing.JLabel();
         Yes_Sharp = new javax.swing.JRadioButton();
         No_Sharp = new javax.swing.JRadioButton();
@@ -56,6 +57,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
         jLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel.setText("Does it have sharp borders?");
 
+        buttonGroup1.add(Yes_Sharp);
         Yes_Sharp.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Yes_Sharp.setText("Yes");
         Yes_Sharp.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +66,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(No_Sharp);
         No_Sharp.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         No_Sharp.setText("No");
         No_Sharp.addActionListener(new java.awt.event.ActionListener() {
@@ -91,47 +94,43 @@ public class SharpBordersFr extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(128, 128, 128)
+                .addGap(178, 178, 178)
                 .addComponent(Yes_Sharp)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(No_Sharp)
-                .addGap(175, 175, 175))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(jLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(63, 63, 63)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addGap(205, 205, 205))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Next)
                 .addGap(33, 33, 33))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(227, 227, 227)
+                        .addComponent(jLabel)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(64, 64, 64)
                 .addComponent(jLabel)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(No_Sharp)
-                            .addComponent(Yes_Sharp))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addComponent(Next)
-                        .addGap(19, 19, 19))))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(No_Sharp)
+                    .addComponent(Yes_Sharp))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(Next)
+                .addGap(19, 19, 19))
         );
 
         pack();
@@ -200,6 +199,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
     private javax.swing.JButton Next;
     private javax.swing.JRadioButton No_Sharp;
     private javax.swing.JRadioButton Yes_Sharp;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

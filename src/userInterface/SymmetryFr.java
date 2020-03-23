@@ -25,7 +25,7 @@ public class SymmetryFr extends javax.swing.JFrame {
      */
     public SymmetryFr() {
         initComponents();
-        this.setSize(new Dimension(700,413));
+        this.setSize(new Dimension(700,420));
         ImageIcon yes_symmetry = new ImageIcon("src/images/bulky.jpg");
         Icon icono1 = new ImageIcon(yes_symmetry.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
         jLabel1.setIcon(icono1);
@@ -108,7 +108,7 @@ public class SymmetryFr extends javax.swing.JFrame {
                         .addComponent(jLabel))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(55, 55, 55)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(48, 48, 48)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(65, Short.MAX_VALUE))

@@ -29,9 +29,9 @@ public class DiagnosisFr extends javax.swing.JFrame {
      */
     public DiagnosisFr() throws CLIPSLoadException {
         initComponents();
-        this.setSize(new Dimension(700,413));
+      
         ImageIcon image = new ImageIcon("src/images/diagnose_lupa.png");
-        Icon icono = new ImageIcon(image.getImage().getScaledInstance(jLabel4.getWidth(), jLabel4.getHeight(), Image.SCALE_DEFAULT));
+        Icon icono = new ImageIcon(image.getImage().getScaledInstance(jLabel4.getWidth(), 413, Image.SCALE_DEFAULT));
         jLabel4.setIcon(icono);
         this.repaint();
         clips();
@@ -75,7 +75,7 @@ public class DiagnosisFr extends javax.swing.JFrame {
         jScrollPane1.setViewportView(Message_TextArea);
 
         Exit_Button.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        Exit_Button.setText("Exit");
+        Exit_Button.setText("Finish");
         Exit_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Exit_ButtonActionPerformed(evt);
