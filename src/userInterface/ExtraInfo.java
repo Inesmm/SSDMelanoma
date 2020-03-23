@@ -51,12 +51,16 @@ public class ExtraInfo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Do you have more or less than 50 moles?");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("What is your skin tone?");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Are there any cases of melanoma in your family?");
 
+        SkinTone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         SkinTone.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-Select option-", "Fair", "Light brown", "Dark brown" }));
         SkinTone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +68,7 @@ public class ExtraInfo extends javax.swing.JFrame {
             }
         });
 
+        NextButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         NextButton.setText("Next");
         NextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +77,7 @@ public class ExtraInfo extends javax.swing.JFrame {
         });
 
         buttonGroup_number_moles.add(More_Moles);
+        More_Moles.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         More_Moles.setText("More");
         More_Moles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +86,7 @@ public class ExtraInfo extends javax.swing.JFrame {
         });
 
         buttonGroup_number_moles.add(Less_Moles);
+        Less_Moles.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Less_Moles.setText("Less");
         Less_Moles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +95,7 @@ public class ExtraInfo extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(Yes_Family);
+        Yes_Family.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Yes_Family.setText("Yes");
         Yes_Family.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +104,7 @@ public class ExtraInfo extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(No_Family);
+        No_Family.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         No_Family.setText("No");
         No_Family.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,37 +117,39 @@ public class ExtraInfo extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(More_Moles)
-                        .addGap(46, 46, 46)
-                        .addComponent(Less_Moles)
-                        .addGap(290, 290, 290))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(NextButton)
-                        .addGap(58, 58, 58))))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(NextButton)
+                .addGap(29, 29, 29))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(205, 205, 205)
+                        .addGap(154, 154, 154)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(15, 15, 15)
+                                        .addComponent(jLabel1))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(97, 97, 97)
+                                        .addComponent(More_Moles)
+                                        .addGap(46, 46, 46)
+                                        .addComponent(Less_Moles)))
+                                .addGap(40, 40, 40))
+                            .addComponent(jLabel3)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(111, 111, 111)
                                 .addComponent(Yes_Family)
                                 .addGap(44, 44, 44)
                                 .addComponent(No_Family))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(246, 246, 246)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(256, 256, 256)
-                        .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(184, 184, 184)
-                        .addComponent(jLabel3)))
-                .addGap(0, 236, Short.MAX_VALUE))
+                        .addGap(242, 242, 242)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,22 +160,19 @@ public class ExtraInfo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(More_Moles)
                     .addComponent(Less_Moles))
-                .addGap(34, 34, 34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGap(59, 59, 59)
                 .addComponent(jLabel3)
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(NextButton)
-                        .addGap(31, 31, 31))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(No_Family)
-                            .addComponent(Yes_Family))
-                        .addGap(103, 103, 103))))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(No_Family)
+                    .addComponent(Yes_Family))
+                .addGap(45, 45, 45)
+                .addComponent(NextButton)
+                .addGap(23, 23, 23))
         );
 
         pack();

@@ -41,8 +41,10 @@ public class SharpBordersFr extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel.setText("Does it have sharp borders?");
 
+        Yes_Sharp.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Yes_Sharp.setText("Yes");
         Yes_Sharp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +52,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
             }
         });
 
+        No_Sharp.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         No_Sharp.setText("No");
         No_Sharp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +60,7 @@ public class SharpBordersFr extends javax.swing.JFrame {
             }
         });
 
+        Next.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Next.setText("Next");
         Next.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,19 +73,19 @@ public class SharpBordersFr extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(416, Short.MAX_VALUE)
+                .addContainerGap(203, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(Yes_Sharp)
-                        .addGap(18, 18, 18)
+                        .addGap(185, 185, 185)
                         .addComponent(No_Sharp)
-                        .addGap(163, 163, 163))
+                        .addGap(230, 230, 230))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel)
-                        .addGap(124, 124, 124))
+                        .addGap(249, 249, 249))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(Next)
-                        .addGap(19, 19, 19))))
+                        .addGap(37, 37, 37))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,9 +96,9 @@ public class SharpBordersFr extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(No_Sharp)
                     .addComponent(Yes_Sharp))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
                 .addComponent(Next)
-                .addGap(22, 22, 22))
+                .addGap(32, 32, 32))
         );
 
         pack();

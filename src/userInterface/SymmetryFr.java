@@ -41,8 +41,10 @@ public class SymmetryFr extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel.setText("Is it symmetric?");
 
+        Yes_Symmetry.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Yes_Symmetry.setText("Yes");
         Yes_Symmetry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +52,7 @@ public class SymmetryFr extends javax.swing.JFrame {
             }
         });
 
+        No_Symmetry.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         No_Symmetry.setText("No");
         No_Symmetry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +60,7 @@ public class SymmetryFr extends javax.swing.JFrame {
             }
         });
 
+        Next.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Next.setText("Next");
         Next.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,37 +72,33 @@ public class SymmetryFr extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
-                .addComponent(jLabel)
-                .addContainerGap(462, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(616, Short.MAX_VALUE)
                 .addComponent(Next)
                 .addGap(28, 28, 28))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(151, 151, 151)
-                    .addComponent(Yes_Symmetry)
-                    .addGap(18, 18, 18)
-                    .addComponent(No_Symmetry)
-                    .addContainerGap(439, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(272, 272, 272)
+                .addComponent(jLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(161, 161, 161)
+                .addComponent(Yes_Symmetry)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(No_Symmetry)
+                .addGap(227, 227, 227))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 309, Short.MAX_VALUE)
+                .addGap(75, 75, 75)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Yes_Symmetry)
+                    .addComponent(No_Symmetry))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
                 .addComponent(Next)
                 .addGap(24, 24, 24))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(141, 141, 141)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Yes_Symmetry)
-                        .addComponent(No_Symmetry))
-                    .addContainerGap(247, Short.MAX_VALUE)))
         );
 
         pack();
