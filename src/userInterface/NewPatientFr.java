@@ -7,6 +7,7 @@ package userInterface;
 
 import java.awt.Dimension;
 import java.awt.Image;
+import javafx.scene.paint.Color;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -42,6 +43,8 @@ public class NewPatientFr extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Do you want to measure a new patient?");
