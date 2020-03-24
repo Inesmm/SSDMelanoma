@@ -38,6 +38,7 @@ public class DiameterFr extends javax.swing.JFrame {
         Yes_Diameter = new javax.swing.JRadioButton();
         No_Diameter = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
+        Back_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(java.awt.Color.lightGray);
@@ -75,6 +76,14 @@ public class DiameterFr extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
+        Back_Button.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Back_Button.setText("Back");
+        Back_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Back_ButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,7 +102,9 @@ public class DiameterFr extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                 .addGap(29, 205, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(75, 75, 75)
+                .addComponent(Back_Button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Next_Diameter)
                 .addGap(59, 59, 59))
         );
@@ -109,7 +120,9 @@ public class DiameterFr extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(Next_Diameter)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Next_Diameter)
+                    .addComponent(Back_Button))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -137,6 +150,12 @@ public class DiameterFr extends javax.swing.JFrame {
         String diameter = (String) No_Diameter.getActionCommand();
         WelcomeFr.p.setDiameter(diameter);
     }//GEN-LAST:event_No_DiameterActionPerformed
+
+    private void Back_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back_ButtonActionPerformed
+        this.setVisible(false);
+        SharpBordersFr sharpBordersFr = new SharpBordersFr();
+        sharpBordersFr.setVisible(true);
+    }//GEN-LAST:event_Back_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,6 +193,7 @@ public class DiameterFr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back_Button;
     private javax.swing.JButton Next_Diameter;
     private javax.swing.JRadioButton No_Diameter;
     private javax.swing.JRadioButton Yes_Diameter;

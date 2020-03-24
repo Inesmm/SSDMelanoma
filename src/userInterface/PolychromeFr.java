@@ -39,6 +39,7 @@ public class PolychromeFr extends javax.swing.JFrame {
         Next_Polychrome = new javax.swing.JButton();
         Yes_Polychrome = new javax.swing.JRadioButton();
         No_Polychrome = new javax.swing.JRadioButton();
+        Back_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,6 +78,14 @@ public class PolychromeFr extends javax.swing.JFrame {
             }
         });
 
+        Back_Button.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Back_Button.setText("Back");
+        Back_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Back_ButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,7 +102,9 @@ public class PolychromeFr extends javax.swing.JFrame {
                         .addComponent(jLabel3)))
                 .addContainerGap(99, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(57, 57, 57)
+                .addComponent(Back_Button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Next_Polychrome)
                 .addGap(51, 51, 51))
             .addGroup(layout.createSequentialGroup()
@@ -108,7 +119,7 @@ public class PolychromeFr extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Polychrome)
                     .addComponent(No_Polychrome))
@@ -117,8 +128,10 @@ public class PolychromeFr extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(50, 50, 50)
-                .addComponent(Next_Polychrome)
-                .addGap(44, 44, 44))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Next_Polychrome)
+                    .addComponent(Back_Button))
+                .addGap(43, 43, 43))
         );
 
         pack();
@@ -145,6 +158,12 @@ public class PolychromeFr extends javax.swing.JFrame {
         String polychrome = (String) No_Polychrome.getActionCommand();
         WelcomeFr.p.setPolychrome(polychrome);
     }//GEN-LAST:event_No_PolychromeActionPerformed
+
+    private void Back_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back_ButtonActionPerformed
+        this.setVisible(false);
+        DiameterFr diameterFr = new DiameterFr();
+        diameterFr.setVisible(true);
+    }//GEN-LAST:event_Back_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,6 +201,7 @@ public class PolychromeFr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back_Button;
     private javax.swing.JButton Next_Polychrome;
     private javax.swing.JRadioButton No_Polychrome;
     private javax.swing.JRadioButton Yes_Polychrome;

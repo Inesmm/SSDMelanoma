@@ -10,6 +10,7 @@ import java.awt.Dimension;
 import java.awt.Image;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -172,12 +173,12 @@ public class WelcomeFr extends javax.swing.JFrame {
                     catch(NumberFormatException e){
                         JOptionPane.showMessageDialog(null, "Please introduce a number.");
                     }
-                    p.setName(Name_TextField.getText());
-                    p.setAge(Integer.parseInt(Age_TextField.getText()));
-                    System.out.println(p.getName() + p.getAge() + p.getGender());
-                    this.setVisible(false);
-                    SymmetryFr symmetryFr = new SymmetryFr();
-                    symmetryFr.setVisible(true);
+                        p.setName(Name_TextField.getText());
+                        p.setAge(Integer.parseInt(Age_TextField.getText()));
+                        System.out.println(p.getName() + p.getAge() + p.getGender());
+                        this.setVisible(false);
+                        SymmetryFr symmetryFr = new SymmetryFr();
+                        symmetryFr.setVisible(true);
                 }
             }
         }

@@ -47,6 +47,7 @@ public class ExtraInfo extends javax.swing.JFrame {
         Less_Moles = new javax.swing.JRadioButton();
         Yes_Family = new javax.swing.JRadioButton();
         No_Family = new javax.swing.JRadioButton();
+        Back_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,6 +112,14 @@ public class ExtraInfo extends javax.swing.JFrame {
             }
         });
 
+        Back_button.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Back_button.setText("Back");
+        Back_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Back_buttonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -142,7 +151,9 @@ public class ExtraInfo extends javax.swing.JFrame {
                         .addComponent(jLabel1)))
                 .addContainerGap(160, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(61, 61, 61)
+                .addComponent(Back_button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(NextButton)
                 .addGap(86, 86, 86))
         );
@@ -155,7 +166,7 @@ public class ExtraInfo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(More_Moles)
                     .addComponent(Less_Moles))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(27, 27, 27)
                 .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -166,8 +177,10 @@ public class ExtraInfo extends javax.swing.JFrame {
                     .addComponent(No_Family)
                     .addComponent(Yes_Family))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(NextButton)
-                .addGap(59, 59, 59))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NextButton)
+                    .addComponent(Back_button))
+                .addGap(58, 58, 58))
         );
 
         pack();
@@ -226,6 +239,12 @@ public class ExtraInfo extends javax.swing.JFrame {
         WelcomeFr.p.setFamily_history(family_history);
     }//GEN-LAST:event_No_FamilyActionPerformed
 
+    private void Back_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back_buttonActionPerformed
+        this.setVisible(false);
+        Feelings feelingsFr = new Feelings();
+        feelingsFr.setVisible(true);
+    }//GEN-LAST:event_Back_buttonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -262,6 +281,7 @@ public class ExtraInfo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back_button;
     private javax.swing.JRadioButton Less_Moles;
     private javax.swing.JRadioButton More_Moles;
     private javax.swing.JButton NextButton;

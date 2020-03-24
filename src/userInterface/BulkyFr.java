@@ -37,6 +37,7 @@ public class BulkyFr extends javax.swing.JFrame {
         Next_Bulky = new javax.swing.JButton();
         Yes_Bulky = new javax.swing.JRadioButton();
         No_Bulky = new javax.swing.JRadioButton();
+        Back_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +79,14 @@ public class BulkyFr extends javax.swing.JFrame {
             }
         });
 
+        Back_Button.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Back_Button.setText("Back");
+        Back_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Back_ButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -89,14 +98,15 @@ public class BulkyFr extends javax.swing.JFrame {
                 .addComponent(No_Bulky)
                 .addGap(176, 176, 176))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Back_Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Next_Bulky)))
                 .addGap(58, 58, 58))
             .addGroup(layout.createSequentialGroup()
@@ -118,7 +128,9 @@ public class BulkyFr extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
-                .addComponent(Next_Bulky)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Next_Bulky)
+                    .addComponent(Back_Button))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
@@ -146,6 +158,12 @@ public class BulkyFr extends javax.swing.JFrame {
         String bulky = (String) No_Bulky.getActionCommand();
         WelcomeFr.p.setBulky(bulky);
     }//GEN-LAST:event_No_BulkyActionPerformed
+
+    private void Back_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back_ButtonActionPerformed
+        this.setVisible(false);
+        PolychromeFr polychromeFr = new PolychromeFr();
+        polychromeFr.setVisible(true);
+    }//GEN-LAST:event_Back_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +201,7 @@ public class BulkyFr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back_Button;
     private javax.swing.ButtonGroup Bulky_ButtonGroup;
     private javax.swing.JButton Next_Bulky;
     private javax.swing.JRadioButton No_Bulky;
