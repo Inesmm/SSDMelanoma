@@ -36,43 +36,30 @@ public class Feelings extends javax.swing.JFrame {
         buttonGroup_Pain = new javax.swing.ButtonGroup();
         buttonGroup_Itchiness = new javax.swing.ButtonGroup();
         buttonGroup_Soft = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        Next3 = new javax.swing.JButton();
         Yes_Bleed = new javax.swing.JRadioButton();
         No_Bleed = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
         Yes_Pain = new javax.swing.JRadioButton();
         No_Pain = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
         Yes_Itch = new javax.swing.JRadioButton();
         No_Itch = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
         Yes_Soft = new javax.swing.JRadioButton();
         No_Soft = new javax.swing.JRadioButton();
+        Next3 = new javax.swing.JButton();
         Back_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Does your mole bleed?");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("Do you have pain?");
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Does the mole itch?");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setText("Is your mole soft to the touch?");
-
-        Next3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        Next3.setText("Next");
-        Next3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Next3ActionPerformed(evt);
-            }
-        });
-
+        Yes_Bleed.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_Bleeding.add(Yes_Bleed);
         Yes_Bleed.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Yes_Bleed.setText("Yes");
@@ -82,6 +69,7 @@ public class Feelings extends javax.swing.JFrame {
             }
         });
 
+        No_Bleed.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_Bleeding.add(No_Bleed);
         No_Bleed.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         No_Bleed.setText("No");
@@ -91,6 +79,10 @@ public class Feelings extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setText("Do you have pain?");
+
+        Yes_Pain.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_Pain.add(Yes_Pain);
         Yes_Pain.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Yes_Pain.setText("Yes");
@@ -100,6 +92,7 @@ public class Feelings extends javax.swing.JFrame {
             }
         });
 
+        No_Pain.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_Pain.add(No_Pain);
         No_Pain.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         No_Pain.setText("No");
@@ -109,6 +102,10 @@ public class Feelings extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Does the mole itch?");
+
+        Yes_Itch.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_Itchiness.add(Yes_Itch);
         Yes_Itch.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Yes_Itch.setText("Yes");
@@ -118,6 +115,7 @@ public class Feelings extends javax.swing.JFrame {
             }
         });
 
+        No_Itch.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_Itchiness.add(No_Itch);
         No_Itch.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         No_Itch.setText("No");
@@ -127,6 +125,10 @@ public class Feelings extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setText("Is your mole soft to the touch?");
+
+        Yes_Soft.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_Soft.add(Yes_Soft);
         Yes_Soft.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Yes_Soft.setText("Yes");
@@ -136,12 +138,21 @@ public class Feelings extends javax.swing.JFrame {
             }
         });
 
+        No_Soft.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_Soft.add(No_Soft);
         No_Soft.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         No_Soft.setText("No");
         No_Soft.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 No_SoftActionPerformed(evt);
+            }
+        });
+
+        Next3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Next3.setText("Next");
+        Next3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Next3ActionPerformed(evt);
             }
         });
 
@@ -153,82 +164,85 @@ public class Feelings extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Back_Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Next3)
+                        .addGap(96, 96, 96))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(Yes_Pain)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(No_Pain, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel2)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(Yes_Bleed)
+                                        .addGap(49, 49, 49)
+                                        .addComponent(No_Bleed, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(142, 142, 142)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Yes_Itch)
+                                .addGap(50, 50, 50)
+                                .addComponent(No_Itch, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Yes_Soft)
+                                .addGap(61, 61, 61)
+                                .addComponent(No_Soft, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(85, Short.MAX_VALUE))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Yes_Bleed)
+                    .addComponent(No_Bleed)
+                    .addComponent(Yes_Itch)
+                    .addComponent(No_Itch))
+                .addGap(39, 39, 39)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Yes_Pain)
+                    .addComponent(No_Pain)
+                    .addComponent(Yes_Soft)
+                    .addComponent(No_Soft))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Next3)
+                    .addComponent(Back_Button))
+                .addGap(65, 65, 65))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(Yes_Bleed)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(No_Bleed, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(Yes_Pain)
-                                    .addGap(49, 49, 49)
-                                    .addComponent(No_Pain, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Back_Button)
-                                .addGap(99, 99, 99)))
-                        .addGap(167, 167, 167)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Yes_Soft)
-                                .addGap(39, 39, 39)
-                                .addComponent(No_Soft, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Yes_Itch)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(158, 158, 158))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(112, 112, 112)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(No_Itch, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3)))))
-                .addContainerGap(98, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Next3)
-                .addGap(68, 68, 68))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(No_Itch)
-                    .addComponent(Yes_Itch)
-                    .addComponent(Yes_Bleed)
-                    .addComponent(No_Bleed))
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Yes_Soft)
-                    .addComponent(No_Soft)
-                    .addComponent(Yes_Pain)
-                    .addComponent(No_Pain))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Next3)
-                    .addComponent(Back_Button))
-                .addGap(62, 62, 62))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -362,5 +376,6 @@ public class Feelings extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
