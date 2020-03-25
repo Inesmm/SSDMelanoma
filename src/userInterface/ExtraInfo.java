@@ -39,12 +39,12 @@ public class ExtraInfo extends javax.swing.JFrame {
         buttonGroup_number_moles = new javax.swing.ButtonGroup();
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel_moles = new javax.swing.JLabel();
         More_Moles = new javax.swing.JRadioButton();
         Less_Moles = new javax.swing.JRadioButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel_tone = new javax.swing.JLabel();
         SkinTone = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel_family = new javax.swing.JLabel();
         Yes_Family = new javax.swing.JRadioButton();
         No_Family = new javax.swing.JRadioButton();
         NextButton = new javax.swing.JButton();
@@ -54,8 +54,8 @@ public class ExtraInfo extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Do you have more or less than 50 moles?");
+        jLabel_moles.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_moles.setText("Do you have more or less than 50 moles?");
 
         More_Moles.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_number_moles.add(More_Moles);
@@ -77,8 +77,8 @@ public class ExtraInfo extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("What is your skin tone?");
+        jLabel_tone.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_tone.setText("What is your skin tone?");
 
         SkinTone.setBackground(new java.awt.Color(204, 255, 255));
         SkinTone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -89,8 +89,8 @@ public class ExtraInfo extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Are there any cases of melanoma in your family?");
+        jLabel_family.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_family.setText("Are there any cases of melanoma in your family?");
 
         Yes_Family.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(Yes_Family);
@@ -148,11 +148,11 @@ public class ExtraInfo extends javax.swing.JFrame {
                         .addGap(146, 146, 146)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
+                                .addComponent(jLabel_tone)
                                 .addGap(37, 37, 37)
                                 .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3))))
+                            .addComponent(jLabel_moles)
+                            .addComponent(jLabel_family))))
                 .addContainerGap(191, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(75, 75, 75)
@@ -165,17 +165,17 @@ public class ExtraInfo extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(84, 84, 84)
-                .addComponent(jLabel1)
+                .addComponent(jLabel_moles)
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Less_Moles)
                     .addComponent(More_Moles))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(jLabel_tone)
                     .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
-                .addComponent(jLabel3)
+                .addComponent(jLabel_family)
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Family)
@@ -211,14 +211,17 @@ public class ExtraInfo extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             if (More_Moles.isSelected()==false && Less_Moles.isSelected()==false){
+                jLabel_moles.setBorder(new LineBorder(Color.red, 2));
                 JOptionPane.showMessageDialog(null, "No option was selected for number of moles. Please check again.");
             }
             else{
                 if(SkinTone.getSelectedItem() == "-Select option-"){
+                    jLabel_tone.setBorder(new LineBorder(Color.red, 2));
                     JOptionPane.showMessageDialog(null, "No option was selected for skin tone. Please check again.");
                 }
                 else{
                     if(Yes_Family.isSelected()==false && No_Family.isSelected()==false){
+                        jLabel_family.setBorder(new LineBorder(Color.red, 2));
                         JOptionPane.showMessageDialog(null, "No option was selected for family history. Please check again.");
                     }
                     else{
@@ -305,9 +308,9 @@ public class ExtraInfo extends javax.swing.JFrame {
     private javax.swing.JRadioButton Yes_Family;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup_number_moles;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel_family;
+    private javax.swing.JLabel jLabel_moles;
+    private javax.swing.JLabel jLabel_tone;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

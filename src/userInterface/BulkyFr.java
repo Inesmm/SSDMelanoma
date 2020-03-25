@@ -5,8 +5,10 @@
  */
 package userInterface;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
+import javax.swing.border.LineBorder;
 
 /**
  *
@@ -162,6 +164,7 @@ public class BulkyFr extends javax.swing.JFrame {
 
     private void Next_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next_BulkyActionPerformed
         if(Yes_Bulky.isSelected()==false && No_Bulky.isSelected()==false){
+            jLabel3.setBorder(new LineBorder(Color.red, 2));
             JOptionPane.showMessageDialog(null, "No option was selected for bulky. Please check again.");
         }
         else{

@@ -5,8 +5,10 @@
  */
 package userInterface;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
+import javax.swing.border.LineBorder;
 import static userInterface.WelcomeFr.p;
 
 /**
@@ -156,6 +158,7 @@ public class PolychromeFr extends javax.swing.JFrame {
 
     private void Next_PolychromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next_PolychromeActionPerformed
        if(Yes_Polychrome.isSelected()==false && No_Polychrome.isSelected()==false){
+           jLabel3.setBorder(new LineBorder(Color.red, 2));
             JOptionPane.showMessageDialog(null, "No option was selected for polychrome. Please check again.");
         }
         else{                 

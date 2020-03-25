@@ -5,8 +5,10 @@
  */
 package userInterface;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
+import javax.swing.border.LineBorder;
 
 
 /**
@@ -154,6 +156,7 @@ public class DiameterFr extends javax.swing.JFrame {
 
     private void Next_DiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next_DiameterActionPerformed
         if(Yes_Diameter.isSelected() == false && No_Diameter.isSelected()== false){
+        jLabel1.setBorder(new LineBorder(Color.red, 2));
         JOptionPane.showMessageDialog(null, "No option was selected for diameter. Please check again.");
         
         }else {

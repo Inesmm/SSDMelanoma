@@ -5,8 +5,10 @@
  */
 package userInterface;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
+import javax.swing.border.LineBorder;
 import static userInterface.WelcomeFr.p;
 
 /**
@@ -250,18 +252,22 @@ public class Feelings extends javax.swing.JFrame {
 
     private void Next3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next3ActionPerformed
         if(Yes_Bleed.isSelected()==false && No_Bleed.isSelected()==false){
+            jLabel1.setBorder(new LineBorder(Color.red, 2));
             JOptionPane.showMessageDialog(null, "No option was selected for bleeding. Please check again.");
         }
         else{
             if(Yes_Pain.isSelected()==false && No_Pain.isSelected()==false){
+                jLabel2.setBorder(new LineBorder(Color.red, 2));
                 JOptionPane.showMessageDialog(null, "No option was selected for pain. Please check again.");
             }
             else{
                 if(Yes_Itch.isSelected()==false && No_Itch.isSelected()==false){
+                    jLabel3.setBorder(new LineBorder(Color.red, 2));
                     JOptionPane.showMessageDialog(null, "No option was selected for itchiness. Please check again.");
                 }
                 else{
                     if(Yes_Soft.isSelected()==false && No_Soft.isSelected()==false){
+                        jLabel4.setBorder(new LineBorder(Color.red, 2));
                     JOptionPane.showMessageDialog(null, "No option was selected for softness. Please check again.");
                     }
                     else{
