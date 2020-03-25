@@ -224,8 +224,8 @@ public class ExtraInfo extends javax.swing.JFrame {
                     else{
                         System.out.println(WelcomeFr.p.getNumber_moles()+ WelcomeFr.p.getSkin_tone()+ WelcomeFr.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
                         this.setVisible(false);
-                        DiagnosisFr diagnosisFr= new DiagnosisFr();
-                        diagnosisFr.setVisible(true);
+                        DiagnosisFr diagnoseFr= new DiagnosisFr();
+                        diagnoseFr.setVisible(true);
                     }
                 }
             }
