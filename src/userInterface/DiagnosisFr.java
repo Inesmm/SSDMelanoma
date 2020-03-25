@@ -64,6 +64,8 @@ public class DiagnosisFr extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
 
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -77,6 +79,7 @@ public class DiagnosisFr extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        Finish_Button.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Finish_Button.setText("Finish");
         Finish_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,8 +87,10 @@ public class DiagnosisFr extends javax.swing.JFrame {
             }
         });
 
+        Score.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Score.setText("Score:");
 
+        Diagnose.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Diagnose.setText("Diagnose:");
 
         Message_TextArea.setColumns(20);
@@ -112,7 +117,7 @@ public class DiagnosisFr extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(Finish_Button))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE))
                         .addGap(28, 28, 28))))
         );
         jPanel1Layout.setVerticalGroup(
