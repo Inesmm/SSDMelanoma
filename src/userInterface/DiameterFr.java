@@ -7,8 +7,12 @@ package userInterface;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
+import static userInterface.WelcomeFr.p;
 
 
 /**
@@ -22,6 +26,10 @@ public class DiameterFr extends javax.swing.JFrame {
      */
     public DiameterFr() {
         initComponents();
+        ImageIcon diameter = new ImageIcon("src/images/diameter_.jpg");
+        Icon icono1 = new ImageIcon(diameter.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
+        jLabel2.setIcon(icono1);
+        this.repaint();
       
     }
 
@@ -79,7 +87,6 @@ public class DiameterFr extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Is the diameter greater than 6mm?");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/diameter_.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
@@ -98,27 +105,27 @@ public class DiameterFr extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(Back_Button)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Yes_Diameter)
-                        .addGap(72, 72, 72)))
+                        .addGap(72, 72, 72))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(Back_Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(Next_Diameter))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(No_Diameter)))
-                .addGap(97, 97, 97))
+                        .addComponent(No_Diameter)
+                        .addGap(241, 241, 241))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(Next_Diameter)
+                        .addGap(38, 38, 38))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(158, 158, 158)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,11 +138,11 @@ public class DiameterFr extends javax.swing.JFrame {
                     .addComponent(Yes_Diameter))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Back_Button)
-                    .addComponent(Next_Diameter))
-                .addGap(40, 40, 40))
+                    .addComponent(Next_Diameter)
+                    .addComponent(Back_Button))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -155,14 +162,21 @@ public class DiameterFr extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Next_DiameterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next_DiameterActionPerformed
-        if(Yes_Diameter.isSelected() == false && No_Diameter.isSelected()== false){
-        jLabel1.setBorder(new LineBorder(Color.red, 2));
-        JOptionPane.showMessageDialog(null, "No option was selected for diameter. Please check again.");
         
-        }else {
-        this.setVisible(false);
-        PolychromeFr polychromeFr = new PolychromeFr();
-        polychromeFr.setVisible(true);
+        if(Yes_Diameter.isSelected() == false && No_Diameter.isSelected()== false){
+            if(Yes_Diameter.isSelected() == false && No_Diameter.isSelected()== false){
+                jLabel1.setBorder(new LineBorder(Color.red, 2));
+                JOptionPane.showMessageDialog(null, "No option was selected for diameter. Please check again.");
+            }
+            if(Yes_Diameter.isSelected() == true || No_Diameter.isSelected()== true){
+                jLabel1.setBorder(new LineBorder(Color.green, 2));
+            }
+        }
+        else {
+            System.out.println(" Diameter grater than 6?: " + p.getDiameter());
+            this.setVisible(false);
+            PolychromeFr polychromeFr = new PolychromeFr();
+            polychromeFr.setVisible(true);
         
         }
     }//GEN-LAST:event_Next_DiameterActionPerformed

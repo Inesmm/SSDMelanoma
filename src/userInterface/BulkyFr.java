@@ -7,6 +7,9 @@ package userInterface;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
 
@@ -21,6 +24,13 @@ public class BulkyFr extends javax.swing.JFrame {
      */
     public BulkyFr() {
         initComponents();
+        ImageIcon yes_bulky = new ImageIcon("src/images/bulky.jpg");
+        Icon icono1 = new ImageIcon(yes_bulky.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
+        jLabel1.setIcon(icono1);
+        ImageIcon no_bulky = new ImageIcon("src/images/normal_bulky.jpg");
+        Icon icono2 = new ImageIcon(no_bulky.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
+        jLabel2.setIcon(icono2);
+        this.repaint();
     }
 
     /**
@@ -46,13 +56,13 @@ public class BulkyFr extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bulky.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jLabel1.setMaximumSize(new java.awt.Dimension(306, 174));
         jLabel1.setMinimumSize(new java.awt.Dimension(306, 174));
         jLabel1.setPreferredSize(new java.awt.Dimension(306, 174));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/normal_bulky.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         Yes_Bulky.setBackground(new java.awt.Color(204, 255, 255));
@@ -99,49 +109,50 @@ public class BulkyFr extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(Back_Button)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Next_Bulky))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(41, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(186, 186, 186)
+                .addGap(152, 152, 152)
                 .addComponent(Yes_Bulky)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(No_Bulky)
                 .addGap(177, 177, 177))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(214, 214, 214))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(Back_Button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Next_Bulky)
+                .addGap(31, 31, 31))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(208, 208, 208)
+                        .addComponent(jLabel3)))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(72, Short.MAX_VALUE)
+                .addGap(60, 60, 60)
                 .addComponent(jLabel3)
-                .addGap(33, 33, 33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Bulky)
                     .addComponent(No_Bulky))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(58, 58, 58)
+                        .addGap(22, 22, 22))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(75, 75, 75)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Back_Button)
-                            .addComponent(Next_Bulky))
-                        .addGap(47, 47, 47))))
+                            .addComponent(Next_Bulky)
+                            .addComponent(Back_Button))
+                        .addGap(30, 30, 30))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -163,12 +174,18 @@ public class BulkyFr extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Next_BulkyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next_BulkyActionPerformed
+            
         if(Yes_Bulky.isSelected()==false && No_Bulky.isSelected()==false){
-            jLabel3.setBorder(new LineBorder(Color.red, 2));
-            JOptionPane.showMessageDialog(null, "No option was selected for bulky. Please check again.");
+            if(Yes_Bulky.isSelected()==false && No_Bulky.isSelected()==false){
+                jLabel3.setBorder(new LineBorder(Color.red, 2));
+                JOptionPane.showMessageDialog(null, "No option was selected for bulky. Please check again.");
+            }
+            if(Yes_Bulky.isSelected()==true || No_Bulky.isSelected()==true){
+                jLabel3.setBorder(new LineBorder(Color.red, 2));
+            }
         }
         else{
-            System.out.println("\n Bulky: " +WelcomeFr.p.getBulky()); //SOLO PARA COMPROBAR QUE GUARDA
+            System.out.println(" Bulky: " +WelcomeFr.p.getBulky());
             this.setVisible(false);
             Feelings feelingsFr = new Feelings();
             feelingsFr.setVisible(true);

@@ -28,7 +28,7 @@ public class DiagnosisFr extends javax.swing.JFrame {
      */
     public DiagnosisFr() throws CLIPSLoadException {
         initComponents();
-        ImageIcon image = new ImageIcon("src/images/diagnose_lupa.png");
+        ImageIcon image = new ImageIcon("src/images/Diagnosis.png");
         Icon icono = new ImageIcon(image.getImage().getScaledInstance(jLabel2.getWidth(),jLabel2.getHeight() , Image.SCALE_DEFAULT));
         jLabel2.setIcon(icono);
         this.repaint();
@@ -64,19 +64,23 @@ public class DiagnosisFr extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
 
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jLabel2.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         Finish_Button.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -87,10 +91,10 @@ public class DiagnosisFr extends javax.swing.JFrame {
             }
         });
 
-        Score.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Score.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         Score.setText("Score:");
 
-        Diagnose.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Diagnose.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         Diagnose.setText("Diagnose:");
 
         Message_TextArea.setColumns(20);
@@ -103,22 +107,21 @@ public class DiagnosisFr extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Diagnose)
-                    .addComponent(Score))
-                .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(Score_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Diagnose)
+                            .addComponent(Score))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Score_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(18, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(Finish_Button))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE))
-                        .addGap(28, 28, 28))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Finish_Button)
+                        .addGap(27, 27, 27))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,10 +134,10 @@ public class DiagnosisFr extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Diagnose)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Finish_Button)
-                .addGap(42, 42, 42))
+                .addGap(27, 27, 27))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -170,10 +173,10 @@ public class DiagnosisFr extends javax.swing.JFrame {
             clips.run();
             FactAddressValue patient = clips.findFact("patient");
             String score = patient.getSlotValue("score").toString();
-            System.out.println("Score: "+score);
+            System.out.println(" Score: " + score);
             Score_TextField.setText(score);
             String message = patient.getSlotValue("message").toString();
-            System.out.println("Message: "+ message);
+            System.out.println(" Message: " + message);
             Message_TextArea.setText(message);
             Message_TextArea.setLineWrap(true);
             

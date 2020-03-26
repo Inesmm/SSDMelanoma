@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
 import net.sf.clipsrules.jni.CLIPSLoadException;
 import userInterface.WelcomeFr;
+import static userInterface.WelcomeFr.p;
 
 /**
  *
@@ -155,11 +156,11 @@ public class ExtraInfo extends javax.swing.JFrame {
                             .addComponent(jLabel_family))))
                 .addContainerGap(191, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(35, 35, 35)
                 .addComponent(Back_button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(NextButton)
-                .addGap(128, 128, 128))
+                .addGap(38, 38, 38))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,11 +181,11 @@ public class ExtraInfo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Family)
                     .addComponent(No_Family))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NextButton)
-                    .addComponent(Back_button))
-                .addGap(49, 49, 49))
+                    .addComponent(Back_button)
+                    .addComponent(NextButton))
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -209,29 +210,38 @@ public class ExtraInfo extends javax.swing.JFrame {
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         try {
-            // TODO add your handling code here:
-            if (More_Moles.isSelected()==false && Less_Moles.isSelected()==false){
-                jLabel_moles.setBorder(new LineBorder(Color.red, 2));
-                JOptionPane.showMessageDialog(null, "No option was selected for number of moles. Please check again.");
+            if ((More_Moles.isSelected()==false && Less_Moles.isSelected()==false) ||
+                (SkinTone.getSelectedItem() == "-Select option-") ||
+                (Yes_Family.isSelected()==false && No_Family.isSelected()==false)){
+                
+                if (More_Moles.isSelected()==false && Less_Moles.isSelected()==false){
+                    jLabel_moles.setBorder(new LineBorder(Color.red, 3));
+                }
+                if (More_Moles.isSelected()==true || Less_Moles.isSelected()==true){
+                    jLabel_moles.setBorder(new LineBorder(Color.green, 3));
+                }
+                if(SkinTone.getSelectedItem() == "-Select option-"){
+                    jLabel_tone.setBorder(new LineBorder(Color.red, 3));
+                }
+                if(SkinTone.getSelectedItem() != "-Select option-"){
+                    jLabel_tone.setBorder(new LineBorder(Color.green, 3));
+                }
+                if(Yes_Family.isSelected()==false && No_Family.isSelected()==false){
+                    jLabel_family.setBorder(new LineBorder(Color.red, 3));
+                }
+                if(Yes_Family.isSelected()==true || No_Family.isSelected()==true){
+                    jLabel_family.setBorder(new LineBorder(Color.green, 3));
+                }
+
+            JOptionPane.showMessageDialog(null, "No option was selected for family history. Please check again.");
             }
             else{
-                if(SkinTone.getSelectedItem() == "-Select option-"){
-                    jLabel_tone.setBorder(new LineBorder(Color.red, 2));
-                    JOptionPane.showMessageDialog(null, "No option was selected for skin tone. Please check again.");
-                }
-                else{
-                    if(Yes_Family.isSelected()==false && No_Family.isSelected()==false){
-                        jLabel_family.setBorder(new LineBorder(Color.red, 2));
-                        JOptionPane.showMessageDialog(null, "No option was selected for family history. Please check again.");
-                    }
-                    else{
-                        System.out.println(WelcomeFr.p.getNumber_moles()+ WelcomeFr.p.getSkin_tone()+ WelcomeFr.p.getFamily_history()); //SOLO PARA COMPROBAR QUE LO GUARDA BIEN
-                        this.setVisible(false);
-                        DiagnosisFr diagnoseFr= new DiagnosisFr();
-                        diagnoseFr.setVisible(true);
-                    }
-                }
+                System.out.println(" Number of moles: "+ p.getNumber_moles()+ "\n Skin tone: " +p.getSkin_tone()+ "\n Family history: " +p.getFamily_history());
+                this.setVisible(false);
+                DiagnosisFr diagnoseFr= new DiagnosisFr();
+                diagnoseFr.setVisible(true);
             }
+            
         } catch (CLIPSLoadException ex) {
             Logger.getLogger(ExtraInfo.class.getName()).log(Level.SEVERE, null, ex);
         }

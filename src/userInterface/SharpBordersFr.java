@@ -107,47 +107,50 @@ public class SharpBordersFr extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(155, 155, 155)
+                .addGap(171, 171, 171)
                 .addComponent(Yes_Sharp)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(No_Sharp)
-                .addGap(217, 217, 217))
+                .addGap(189, 189, 189))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(81, 81, 81)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Back_button)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Next))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(225, 225, 225)
-                        .addComponent(jLabel)))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addGap(87, 87, 87)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(93, 93, 93))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(Back_button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Next)
+                .addGap(42, 42, 42))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(226, 226, 226)
+                .addComponent(jLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(60, 60, 60)
                 .addComponent(jLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGap(61, 61, 61)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Sharp)
                     .addComponent(No_Sharp))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Back_button)
-                    .addComponent(Next))
-                .addGap(36, 36, 36))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Back_button)
+                            .addComponent(Next))
+                        .addGap(28, 28, 28))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 110, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -175,13 +178,18 @@ public class SharpBordersFr extends javax.swing.JFrame {
     }//GEN-LAST:event_No_SharpActionPerformed
 
     private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
-        // TODO add your handling code here:
+
         if(Yes_Sharp.isSelected()==false && No_Sharp.isSelected()==false){
-            jLabel.setBorder(new LineBorder(Color.red, 2));
-            JOptionPane.showMessageDialog(null, "No option was selected for sharp borders. Please check again.");
+            if(Yes_Sharp.isSelected()==false && No_Sharp.isSelected()==false){
+                jLabel.setBorder(new LineBorder(Color.red, 2));
+                JOptionPane.showMessageDialog(null, "No option was selected for sharp borders. Please check again.");
+            }
+            if(Yes_Sharp.isSelected()==true || No_Sharp.isSelected()==true){
+                jLabel.setBorder(new LineBorder(Color.green, 2));
+            }
         }
         else{
-            System.out.println("\n Sharp borders: " + p.getSharp_borders());
+            System.out.println(" Sharp borders: " + p.getSharp_borders());
             this.setVisible(false);
             DiameterFr diameterFr = new DiameterFr();
             diameterFr.setVisible(true);

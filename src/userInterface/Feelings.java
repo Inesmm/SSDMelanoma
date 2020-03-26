@@ -173,38 +173,37 @@ public class Feelings extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(Back_Button)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Next3)
-                        .addGap(96, 96, 96))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(Yes_Pain)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(No_Pain, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(Yes_Bleed)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(No_Bleed, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(142, 142, 142)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(Yes_Pain)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(No_Pain, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Yes_Itch)
-                                .addGap(50, 50, 50)
-                                .addComponent(No_Itch, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Yes_Soft)
-                                .addGap(61, 61, 61)
-                                .addComponent(No_Soft, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(85, Short.MAX_VALUE))))
+                                .addComponent(Yes_Bleed)
+                                .addGap(49, 49, 49)
+                                .addComponent(No_Bleed, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(142, 142, 142)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Yes_Itch)
+                        .addGap(50, 50, 50)
+                        .addComponent(No_Itch, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Yes_Soft)
+                        .addGap(61, 61, 61)
+                        .addComponent(No_Soft, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(85, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(Back_Button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Next3)
+                .addGap(35, 35, 35))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,11 +228,11 @@ public class Feelings extends javax.swing.JFrame {
                     .addComponent(No_Pain)
                     .addComponent(Yes_Soft)
                     .addComponent(No_Soft))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Next3)
-                    .addComponent(Back_Button))
-                .addGap(65, 65, 65))
+                    .addComponent(Back_Button)
+                    .addComponent(Next3))
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -251,33 +250,53 @@ public class Feelings extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Next3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next3ActionPerformed
-        if(Yes_Bleed.isSelected()==false && No_Bleed.isSelected()==false){
-            jLabel1.setBorder(new LineBorder(Color.red, 2));
-            JOptionPane.showMessageDialog(null, "No option was selected for bleeding. Please check again.");
-        }
-        else{
+        
+        if ((Yes_Bleed.isSelected()==false && No_Bleed.isSelected()==false||
+                (Yes_Pain.isSelected()==false && No_Pain.isSelected()==false) ||
+                (Yes_Itch.isSelected()==false && No_Itch.isSelected()==false) ||
+                (Yes_Soft.isSelected()==false && No_Soft.isSelected()==false))){
+        
+            if(Yes_Bleed.isSelected()==false && No_Bleed.isSelected()==false){
+                jLabel1.setBorder(new LineBorder(Color.red, 3));
+                // JOptionPane.showMessageDialog(null, "No option was selected for bleeding. Please check again."); 
+            }
+            if(Yes_Bleed.isSelected()==true || No_Bleed.isSelected()==true){
+                jLabel1.setBorder(new LineBorder(Color.GREEN, 3));
+            }
+
             if(Yes_Pain.isSelected()==false && No_Pain.isSelected()==false){
-                jLabel2.setBorder(new LineBorder(Color.red, 2));
-                JOptionPane.showMessageDialog(null, "No option was selected for pain. Please check again.");
+                jLabel2.setBorder(new LineBorder(Color.red, 3));
+                // JOptionPane.showMessageDialog(null, "No option was selected for pain. Please check again.");
             }
-            else{
-                if(Yes_Itch.isSelected()==false && No_Itch.isSelected()==false){
-                    jLabel3.setBorder(new LineBorder(Color.red, 2));
-                    JOptionPane.showMessageDialog(null, "No option was selected for itchiness. Please check again.");
-                }
-                else{
-                    if(Yes_Soft.isSelected()==false && No_Soft.isSelected()==false){
-                        jLabel4.setBorder(new LineBorder(Color.red, 2));
-                    JOptionPane.showMessageDialog(null, "No option was selected for softness. Please check again.");
-                    }
-                    else{
-                        System.out.println("Bleeding: "+ p.getBleeding() + "\n Pain: " +p.getPain()+ "\n Itchiness: " +p.getItchiness() +"\n Bulky: "+p.getSoft_texture() + " Nombre: " +p.getName()); //SOLO PARA COMPROBAR QUE GUARDA
-                        this.setVisible(false);
-                        ExtraInfo extraInfoFr = new ExtraInfo();
-                        extraInfoFr.setVisible(true);
-                    }
-                }
+            if(Yes_Pain.isSelected()==true || No_Pain.isSelected()==true){
+                jLabel2.setBorder(new LineBorder(Color.GREEN, 3));
             }
+                
+            if(Yes_Itch.isSelected()==false && No_Itch.isSelected()==false){
+                jLabel3.setBorder(new LineBorder(Color.red, 3));
+                // JOptionPane.showMessageDialog(null, "No option was selected for itchiness. Please check again.");
+            }
+
+            if(Yes_Itch.isSelected()==true || No_Itch.isSelected()==true){
+                jLabel3.setBorder(new LineBorder(Color.GREEN, 3));
+            }
+
+            if(Yes_Soft.isSelected()==false && No_Soft.isSelected()==false){
+                jLabel4.setBorder(new LineBorder(Color.red, 3));
+                // JOptionPane.showMessageDialog(null, "No option was selected for softness. Please check again.");
+            }
+
+            if(Yes_Soft.isSelected()==true || No_Soft.isSelected()==true){
+                jLabel4.setBorder(new LineBorder(Color.GREEN, 3));
+            }
+            JOptionPane.showMessageDialog(null, "One or more questions have not been answered. Please check again.");
+        }
+
+        else{
+            System.out.println(" Bleeding: "+ p.getBleeding() + "\n Pain: " +p.getPain()+ "\n Itchiness: " +p.getItchiness() +"\n Bulky: "+p.getSoft_texture());
+            this.setVisible(false);
+            ExtraInfo extraInfoFr = new ExtraInfo();
+            extraInfoFr.setVisible(true);
         }
     }//GEN-LAST:event_Next3ActionPerformed
 

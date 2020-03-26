@@ -113,24 +113,23 @@ public class SymmetryFr extends javax.swing.JFrame {
                 .addComponent(Yes_Symmetry)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(No_Symmetry)
-                .addGap(228, 228, 228))
+                .addGap(171, 171, 171))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Back_button)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Next))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(73, 73, 73)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(275, 275, 275)
-                        .addComponent(jLabel)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGap(275, 275, 275)
+                .addComponent(jLabel)
+                .addContainerGap(312, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(Back_button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Next)
+                .addGap(40, 40, 40))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,15 +140,19 @@ public class SymmetryFr extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Symmetry)
                     .addComponent(No_Symmetry))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Back_button)
-                    .addComponent(Next))
-                .addGap(37, 37, 37))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(95, 95, 95))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Back_button)
+                            .addComponent(Next))
+                        .addGap(29, 29, 29))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,13 +182,18 @@ public class SymmetryFr extends javax.swing.JFrame {
     }//GEN-LAST:event_No_SymmetryActionPerformed
 
     private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
-        // TODO add your handling code here:
+      
         if(Yes_Symmetry.isSelected()==false && No_Symmetry.isSelected()==false){
-            jLabel.setBorder(new LineBorder(Color.red, 2));
-            JOptionPane.showMessageDialog(null, "No option was selected for symmetry. Please check again.");
+            if(Yes_Symmetry.isSelected()==false && No_Symmetry.isSelected()==false){
+                jLabel.setBorder(new LineBorder(Color.red, 2));
+                JOptionPane.showMessageDialog(null, "No option was selected for symmetry. Please check again.");
+            }
+            if(Yes_Symmetry.isSelected()==true || No_Symmetry.isSelected()==true){
+                jLabel.setBorder(new LineBorder(Color.green, 2));
+            }
         }
         else{
-            System.out.println("\n Symmetry: " + p.getSymmetry());
+            System.out.println(" Symmetry: " + p.getSymmetry());
             this.setVisible(false);
             SharpBordersFr sharpBordersFr = new SharpBordersFr();
             sharpBordersFr.setVisible(true);
