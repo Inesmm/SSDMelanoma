@@ -6,7 +6,6 @@
 package userInterface;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -24,10 +23,10 @@ public class BulkyFr extends javax.swing.JFrame {
      */
     public BulkyFr() {
         initComponents();
-        ImageIcon yes_bulky = new ImageIcon("src/images/bulky.jpg");
+        ImageIcon yes_bulky = new ImageIcon("src/images/yes_bulkiness.jpg");
         Icon icono1 = new ImageIcon(yes_bulky.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
         jLabel1.setIcon(icono1);
-        ImageIcon no_bulky = new ImageIcon("src/images/normal_bulky.jpg");
+        ImageIcon no_bulky = new ImageIcon("src/images/no_bulkiness.jpg");
         Icon icono2 = new ImageIcon(no_bulky.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
         jLabel2.setIcon(icono2);
         this.repaint();
@@ -187,7 +186,7 @@ public class BulkyFr extends javax.swing.JFrame {
         else{
             System.out.println(" Bulky: " +WelcomeFr.p.getBulky());
             this.setVisible(false);
-            Feelings feelingsFr = new Feelings();
+            FeelingsFr feelingsFr = new FeelingsFr();
             feelingsFr.setVisible(true);
         }
     }//GEN-LAST:event_Next_BulkyActionPerformed

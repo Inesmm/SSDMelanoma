@@ -6,14 +6,12 @@
 package userInterface;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
 import static userInterface.WelcomeFr.p;
-
 
 /**
  *
@@ -26,7 +24,7 @@ public class DiameterFr extends javax.swing.JFrame {
      */
     public DiameterFr() {
         initComponents();
-        ImageIcon diameter = new ImageIcon("src/images/diameter_.jpg");
+        ImageIcon diameter = new ImageIcon("src/images/diameter.jpg");
         Icon icono1 = new ImageIcon(diameter.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
         jLabel2.setIcon(icono1);
         this.repaint();

@@ -6,7 +6,6 @@
 package userInterface;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -25,11 +24,10 @@ public class SymmetryFr extends javax.swing.JFrame {
      */
     public SymmetryFr() {
         initComponents();
-        
-        ImageIcon yes_symmetry = new ImageIcon("src/images/bulky.jpg");
+        ImageIcon yes_symmetry = new ImageIcon("src/images/yes_symmetry.jpg");
         Icon icono1 = new ImageIcon(yes_symmetry.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
         jLabel1.setIcon(icono1);
-        ImageIcon no_symmetry = new ImageIcon("src/images/No_Symmetry.png");
+        ImageIcon no_symmetry = new ImageIcon("src/images/no_symmetry.png");
         Icon icono2 = new ImageIcon(no_symmetry.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
         jLabel2.setIcon(icono2);
         this.repaint();

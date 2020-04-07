@@ -6,7 +6,6 @@
 package userInterface;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -25,10 +24,10 @@ public class PolychromeFr extends javax.swing.JFrame {
      */
     public PolychromeFr() {
         initComponents();
-        ImageIcon yes_polychrome = new ImageIcon("src/images/policromia.jpeg");
+        ImageIcon yes_polychrome = new ImageIcon("src/images/yes_polychrome.jpeg");
         Icon icono1 = new ImageIcon(yes_polychrome.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
         jLabel1.setIcon(icono1);
-        ImageIcon no_polychrome = new ImageIcon("src/images/normalcolor.jpeg");
+        ImageIcon no_polychrome = new ImageIcon("src/images/no_polychrome.jpeg");
         Icon icono2 = new ImageIcon(no_polychrome.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
         jLabel2.setIcon(icono2);
         this.repaint();

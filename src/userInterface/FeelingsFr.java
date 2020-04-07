@@ -6,7 +6,6 @@
 package userInterface;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
 import static userInterface.WelcomeFr.p;
@@ -15,12 +14,12 @@ import static userInterface.WelcomeFr.p;
  *
  * @author inesu
  */
-public class Feelings extends javax.swing.JFrame {
+public class FeelingsFr extends javax.swing.JFrame {
   
     /**
      * Creates new form Feelings
      */
-    public Feelings() {
+    public FeelingsFr() {
         initComponents();
       
     }
@@ -295,7 +294,7 @@ public class Feelings extends javax.swing.JFrame {
         else{
             System.out.println(" Bleeding: "+ p.getBleeding() + "\n Pain: " +p.getPain()+ "\n Itchiness: " +p.getItchiness() +"\n Bulky: "+p.getSoft_texture());
             this.setVisible(false);
-            ExtraInfo extraInfoFr = new ExtraInfo();
+            ExtraInfoFr extraInfoFr = new ExtraInfoFr();
             extraInfoFr.setVisible(true);
         }
     }//GEN-LAST:event_Next3ActionPerformed
@@ -364,20 +363,21 @@ public class Feelings extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Feelings.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FeelingsFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Feelings.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FeelingsFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Feelings.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FeelingsFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Feelings.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FeelingsFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Feelings().setVisible(true);
+                new FeelingsFr().setVisible(true);
             }
         });
     }

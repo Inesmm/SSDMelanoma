@@ -4,27 +4,24 @@
  * and open the template in the editor.
  */
 package userInterface;
-import dssmoles.Patient;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
 import net.sf.clipsrules.jni.CLIPSLoadException;
-import userInterface.WelcomeFr;
 import static userInterface.WelcomeFr.p;
 
 /**
  *
  * @author ainhoarey
  */
-public class ExtraInfo extends javax.swing.JFrame {
+public class ExtraInfoFr extends javax.swing.JFrame {
 
     /**
      * Creates new form ExtraInfo
      */
-    public ExtraInfo() {
+    public ExtraInfoFr() {
         initComponents();
     }
 
@@ -238,12 +235,12 @@ public class ExtraInfo extends javax.swing.JFrame {
             else{
                 System.out.println(" Number of moles: "+ p.getNumber_moles()+ "\n Skin tone: " +p.getSkin_tone()+ "\n Family history: " +p.getFamily_history());
                 this.setVisible(false);
-                DiagnosisFr diagnoseFr= new DiagnosisFr();
-                diagnoseFr.setVisible(true);
+                DiagnosisFr diagnosisFr = new DiagnosisFr();
+                diagnosisFr.setVisible(true);
             }
             
         } catch (CLIPSLoadException ex) {
-            Logger.getLogger(ExtraInfo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ExtraInfoFr.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_NextButtonActionPerformed
 
@@ -269,7 +266,7 @@ public class ExtraInfo extends javax.swing.JFrame {
 
     private void Back_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back_buttonActionPerformed
         this.setVisible(false);
-        Feelings feelingsFr = new Feelings();
+        FeelingsFr feelingsFr = new FeelingsFr();
         feelingsFr.setVisible(true);
     }//GEN-LAST:event_Back_buttonActionPerformed
 
@@ -290,20 +287,21 @@ public class ExtraInfo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ExtraInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ExtraInfoFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ExtraInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ExtraInfoFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ExtraInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ExtraInfoFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ExtraInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ExtraInfoFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ExtraInfo().setVisible(true);
+                new ExtraInfoFr().setVisible(true);
             }
         });
     }

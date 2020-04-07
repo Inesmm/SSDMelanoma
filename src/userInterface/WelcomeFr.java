@@ -8,16 +8,9 @@ package userInterface;
 import dssmoles.Patient;
 import java.awt.Dimension;
 import java.awt.Image;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.regex.Pattern;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import net.sf.clipsrules.jni.CLIPSException;
-import net.sf.clipsrules.jni.CLIPSLoadException;
-import net.sf.clipsrules.jni.Environment;
 
 /**
  *
@@ -31,7 +24,7 @@ public class WelcomeFr extends javax.swing.JFrame {
     public WelcomeFr() {
         initComponents();
         this.setSize(new Dimension(700, 500));
-        ImageIcon image = new ImageIcon("src/images/movil_check.jpg");
+        ImageIcon image = new ImageIcon("src/images/phone.jpg");
         Icon icono = new ImageIcon(image.getImage().getScaledInstance(jLabelMedico.getWidth(), jLabelMedico.getHeight(), Image.SCALE_DEFAULT));
         jLabelMedico.setIcon(icono);
         this.repaint();
@@ -109,12 +102,10 @@ public class WelcomeFr extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(86, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(116, Short.MAX_VALUE)
-                        .addComponent(jLabel4))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(86, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel3)

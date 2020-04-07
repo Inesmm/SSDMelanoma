@@ -6,7 +6,6 @@
 package userInterface;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -25,10 +24,10 @@ public class SharpBordersFr extends javax.swing.JFrame {
      */
     public SharpBordersFr() {
         initComponents();
-        ImageIcon yes_sharpborders = new ImageIcon("src/images/Yes_SharpBorders.png");
+        ImageIcon yes_sharpborders = new ImageIcon("src/images/yes_sharpborders.png");
         Icon icono1 = new ImageIcon(yes_sharpborders.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
         jLabel1.setIcon(icono1);
-        ImageIcon no_sharpborders = new ImageIcon("src/images/No_SharpBorders.jpg");
+        ImageIcon no_sharpborders = new ImageIcon("src/images/no_sharpborders.jpg");
         Icon icono2 = new ImageIcon(no_sharpborders.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
         jLabel2.setIcon(icono2);
         this.repaint();

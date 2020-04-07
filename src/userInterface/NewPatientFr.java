@@ -5,11 +5,10 @@
  */
 package userInterface;
 
-import java.awt.Dimension;
 import java.awt.Image;
-import javafx.scene.paint.Color;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import net.sf.clipsrules.jni.CLIPSLoadException;
 
 /**
  *
@@ -79,7 +78,7 @@ public class NewPatientFr extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(114, 114, 114)
+                        .addGap(120, 120, 120)
                         .addComponent(Yes_Patient)
                         .addGap(63, 63, 63)
                         .addComponent(No_Patient, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -91,17 +90,17 @@ public class NewPatientFr extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(180, Short.MAX_VALUE)
+                .addContainerGap(261, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes_Patient)
                     .addComponent(No_Patient))
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addGap(99, 99, 99))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(129, 129, 129)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,7 +126,7 @@ public class NewPatientFr extends javax.swing.JFrame {
     private void No_PatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_No_PatientActionPerformed
         System.exit(0);
     }//GEN-LAST:event_No_PatientActionPerformed
-
+                                              
     /**
      * @param args the command line arguments
      */

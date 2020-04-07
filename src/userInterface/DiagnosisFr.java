@@ -35,10 +35,6 @@ public class DiagnosisFr extends javax.swing.JFrame {
         clips();
     }
     
-    
-    
-      
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -107,9 +103,9 @@ public class DiagnosisFr extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Diagnose)
                             .addComponent(Score))
@@ -117,9 +113,9 @@ public class DiagnosisFr extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Score_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(18, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(36, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(Finish_Button)
                         .addGap(27, 27, 27))))
         );
@@ -159,9 +155,8 @@ public class DiagnosisFr extends javax.swing.JFrame {
         NewPatientFr newPatientFr= new NewPatientFr();
         newPatientFr.setVisible(true);
     }//GEN-LAST:event_Finish_ButtonActionPerformed
-
     
-      private void clips () throws CLIPSLoadException{
+    private void clips () throws CLIPSLoadException{
        
         try {
             Environment clips = new Environment();
@@ -183,7 +178,7 @@ public class DiagnosisFr extends javax.swing.JFrame {
         } catch (CLIPSException ex) {
             Logger.getLogger(DiagnosisFr.class.getName()).log(Level.SEVERE, null, ex);
         }
-      }
+      }     
     
     /**
      * @param args the command line arguments
