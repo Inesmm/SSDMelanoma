@@ -52,12 +52,12 @@ public class ExtraInfoFr extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
-        jLabel_moles.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_moles.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         jLabel_moles.setText("Do you have more or less than 50 moles?");
 
         More_Moles.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_number_moles.add(More_Moles);
-        More_Moles.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        More_Moles.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         More_Moles.setText("More");
         More_Moles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,7 +67,7 @@ public class ExtraInfoFr extends javax.swing.JFrame {
 
         Less_Moles.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup_number_moles.add(Less_Moles);
-        Less_Moles.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Less_Moles.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Less_Moles.setText("Less");
         Less_Moles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,11 +75,11 @@ public class ExtraInfoFr extends javax.swing.JFrame {
             }
         });
 
-        jLabel_tone.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_tone.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         jLabel_tone.setText("What is your skin tone?");
 
         SkinTone.setBackground(new java.awt.Color(204, 255, 255));
-        SkinTone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        SkinTone.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         SkinTone.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-Select option-", "Fair", "Light brown", "Dark brown" }));
         SkinTone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,12 +87,12 @@ public class ExtraInfoFr extends javax.swing.JFrame {
             }
         });
 
-        jLabel_family.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_family.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         jLabel_family.setText("Are there any cases of melanoma in your family?");
 
         Yes_Family.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(Yes_Family);
-        Yes_Family.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Yes_Family.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Yes_Family.setText("Yes");
         Yes_Family.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +102,7 @@ public class ExtraInfoFr extends javax.swing.JFrame {
 
         No_Family.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(No_Family);
-        No_Family.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        No_Family.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         No_Family.setText("No");
         No_Family.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,54 +131,57 @@ public class ExtraInfoFr extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(More_Moles)
-                        .addGap(81, 81, 81)
-                        .addComponent(Less_Moles))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(Yes_Family)
-                        .addGap(97, 97, 97)
-                        .addComponent(No_Family))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel_tone)
-                                .addGap(37, 37, 37)
-                                .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel_moles)
-                            .addComponent(jLabel_family))))
-                .addContainerGap(191, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(Back_button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(NextButton)
                 .addGap(38, 38, 38))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_moles)
+                    .addComponent(jLabel_family)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel_tone)
+                        .addGap(37, 37, 37)
+                        .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(More_Moles)
+                                .addGap(81, 81, 81)
+                                .addComponent(Less_Moles))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Yes_Family)
+                                .addGap(97, 97, 97)
+                                .addComponent(No_Family)))))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(84, 84, 84)
+                .addGap(67, 67, 67)
                 .addComponent(jLabel_moles)
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Less_Moles)
                     .addComponent(More_Moles))
-                .addGap(27, 27, 27)
+                .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_tone)
                     .addComponent(SkinTone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
-                .addComponent(jLabel_family)
-                .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Yes_Family)
-                    .addComponent(No_Family))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel_family)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Yes_Family)
+                            .addComponent(No_Family))))
+                .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Back_button)
                     .addComponent(NextButton))
