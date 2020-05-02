@@ -183,14 +183,23 @@ public class WelcomeFr extends javax.swing.JFrame {
             else{
                 if(Gender.getSelectedItem() == "-Select option-"){
                     JOptionPane.showMessageDialog(null, "Please select a gender.");
-                }else{
+                }else{ 
+                    
+                    String str = Name_TextField.getText();
+                    if (!(str.matches("^[a-zA-Z]*$"))){
+                        
+                        JOptionPane.showMessageDialog(null, "Please introduce a name that only contains letters.");
+                    }
+                    else{
+                  
                     String age = Age_TextField.getText();
                     try{
                        int age2 = Integer.parseInt(age);
                     }
                     catch(NumberFormatException e){
-                        JOptionPane.showMessageDialog(null, "Please introduce a number.");
+                        JOptionPane.showMessageDialog(null, "Please introduce a number as the age.");
                     }
+                    
                         p.setName(Name_TextField.getText());
                         p.setAge(Integer.parseInt(Age_TextField.getText()));
                         System.out.println("---PATIENT INFORMATION---");
@@ -198,6 +207,7 @@ public class WelcomeFr extends javax.swing.JFrame {
                         this.setVisible(false);
                         SymmetryFr symmetryFr = new SymmetryFr();
                         symmetryFr.setVisible(true);
+                    }
                 }
             }
         }
