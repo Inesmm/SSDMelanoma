@@ -186,7 +186,7 @@ public class WelcomeFr extends javax.swing.JFrame {
                 }else{ 
                     
                     String str = Name_TextField.getText();
-                    if (!(str.matches("^[a-zA-Z]*$"))){
+                    if (!(str.matches("^[a-záéíóúA-Z]*$"))){
                         
                         JOptionPane.showMessageDialog(null, "Please introduce a name that only contains letters.");
                     }
